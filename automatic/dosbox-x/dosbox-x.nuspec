@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>dosbox-x</id>
     <title>Dosbox-x</title>
-    <version>0.83.14</version>
+    <version>0.83.18</version>
     <authors>Jonathan Campbell</authors>
     <owners>Xav83</owners>
     <summary>DOSBox-X fork of the DOSBox project.</summary>
@@ -18,12 +18,12 @@ Like DOSBox, it emulates a PC necessary for running many MS-DOS games and applic
     <tags>dosbox dosbox-x dos emulator</tags>
     <!--<iconUrl>http://cdn.rawgit.com/chocolatey-coreteampackages/master/icons/chocolatey-common.extension.png</iconUrl>-->
     <copyright> GNU General Public License, version 2</copyright>
-    <licenseUrl>https://github.com/joncampbell123/dosbox-x/blob/dosbox-x-v0.83.3/COPYING</licenseUrl>
+    <licenseUrl>https://github.com/joncampbell123/dosbox-x/blob/dosbox-x-v0.83.18/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Changelog](https://github.com/joncampbell123/dosbox-x/blob/dosbox-x-v0.83.3/CHANGELOG)</releaseNotes>
+    <releaseNotes>[Changelog](https://github.com/joncampbell123/dosbox-x/blob/dosbox-x-v0.83.18/CHANGELOG)</releaseNotes>
     <docsUrl>https://github.com/joncampbell123/dosbox-x/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/joncampbell123/dosbox-x/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/joncampbell123/dosbox-x</projectSourceUrl>
