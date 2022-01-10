@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>dosbox-x</id>
     <title>Dosbox-x</title>
-    <version>0.83.14</version>
+    <version>0.83.21</version>
     <authors>Jonathan Campbell</authors>
     <owners>Xav83</owners>
     <summary>DOSBox-X fork of the DOSBox project.</summary>
