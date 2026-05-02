@@ -50,17 +50,18 @@ function Get-LatestRelease {
         'X-GitHub-Api-Version' = '2026-03-10'
     }
 
+    # NOTE: note-1 More convoluted usage of releases API
+    # There is a dedicated api for pulling the latest release.
+    # We don't use it as does not report pre-releases (which the old script did).
+	#
+	# NOTE: note-2 Match GitHub API-docs example usage
+    # The cURL based examples use the -L flag allowing redirects (iwr does this by default).
+    # The maximum amount of redirects by default in cURL is 50 (iwr's default is 10).
+    # This flag here allows us to match that 50 redirect number.
     $repoReleases = Invoke-WebRequest `
-        # NOTE: More convoluted usage of releases API
-        # There is a dedicated api for pulling the latest release.
-        # We don't use it as does not report pre-releases (which the old script did).
-        -Uri "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases" `
+        -Uri "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases" <# NOTE: See note-1 #>`
         -Headers $REQUEST_HEADERS `
-        # NOTE: Match GitHub API-docs example usage
-        # The cURL based examples use the -L flag allowing redirects (iwr does this by default).
-        # The maximum amount of redirects by default in cURL is 50 (iwr's default is 10).
-        # This flag here allows us to match that 50 redirect number.
-        -MaximumRedirection 50 `
+        -MaximumRedirection 50 <# NOTE: See note-2 #>`
         -UseBasicParsing `
         | ConvertFrom-Json
     if (-not $repoReleases) {
