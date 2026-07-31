@@ -5,27 +5,27 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>flipflip</id>
     <title>FlipFlip</title>
-    <version>3.2.1</version>
-    <authors>ififfy</authors>
+    <version>5.1.1</version>
+    <authors>regtemp8</authors>
     <owners>Xav83</owners>
     <summary>Random slideshow of local images.</summary>
     <description>
 FlipFlip is a glorified slideshow, with lots of bells and whistles!
 Built specifically for your hypnotic enjoyment 😵
     </description>
-    <projectUrl>https://ififfy.github.io/flipflip</projectUrl>
+    <projectUrl>https://regtemp8.github.io/flipflip</projectUrl>
     <tags>electron windows macos linux slideshow</tags>
-    <iconUrl>https://rawcdn.githack.com/ififfy/flipflip/ce8ead4cfb24a3270e06c14bb51500e6f95fad02/src/renderer/icons/flipflip_logo.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/regtemp8/flipflip/ce8ead4cfb24a3270e06c14bb51500e6f95fad02/src/renderer/icons/flipflip_logo.png</iconUrl>
     <copyright>Copyright 2018 FlipFlip contributors</copyright>
-    <licenseUrl>https://github.com/ififfy/flipflip/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/regtemp8/flipflip/blob/v5.0.0/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Release Notes](https://github.com/ififfy/flipflip/releases)</releaseNotes>
-    <docsUrl>https://github.com/ififfy/flipflip/wiki</docsUrl>
-    <bugTrackerUrl>https://github.com/ififfy/flipflip/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/ififfy/flipflip</projectSourceUrl>
+    <releaseNotes>[Release Notes](https://github.com/regtemp8/flipflip/releases)</releaseNotes>
+    <docsUrl>https://github.com/regtemp8/flipflip/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/regtemp8/flipflip/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/regtemp8/flipflip</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/flipflip</packageSourceUrl>
   </metadata>
   <files>

@@ -1,0 +1,57 @@
+name: Chocolatey Package Test
+
+on:
+  push:
+    branches: [ develop ]
+  workflow_dispatch:
+
+jobs:
+  test-choco-package:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install AU
+        shell: powershell
+        working-directory: ./automatic/flipflip
+        run: |
+          choco install au -y
+
+      - name: Run AU update
+        shell: powershell
+        working-directory: ./automatic/flipflip
+        run: |
+          ./update.ps1
+
+      - name: Build Chocolatey package
+        shell: powershell
+        working-directory: ./automatic/flipflip
+        run: |
+          choco pack
+
+      - name: Find built package
+        id: pkg
+        shell: powershell
+        working-directory: ./automatic/flipflip
+        run: |
+          $pkg = Get-ChildItem -Path . -Filter *.nupkg | Select-Object -First 1
+          if (-not $pkg) { throw "No .nupkg file produced by choco pack." }
+          Write-Host "::set-output name=path::$($pkg.FullName)"
+
+      - name: Test install from local source
+        shell: powershell
+        working-directory: ./automatic/flipflip
+        run: |
+          $pkg = "${{ steps.pkg.outputs.path }}"
+          $name = (Split-Path $pkg -Leaf).Split('.')[0]
+          choco install $name --source . --force --debug --verbose -y
+
+      - name: Test uninstall
+        shell: powershell
+        working-directory: ./automatic/flipflip
+        run: |
+          $pkg = "${{ steps.pkg.outputs.path }}"
+          $name = (Split-Path $pkg -Leaf).Split('.')[0]
+          choco uninstall $name -y

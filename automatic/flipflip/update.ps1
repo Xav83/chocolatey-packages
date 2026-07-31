@@ -1,6 +1,6 @@
-import-module chocolatey-au
+import-module au
 
-$releases = 'https://github.com/ififfy/flipflip/releases'
+$releases = 'https://github.com/regtemp8/flipflip/releases'
 
 function global:au_SearchReplace {
     @{
@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "FlipFlip-Windows.zip"
+    $re  = "FlipFlip-Windows-x64"
 
     $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
