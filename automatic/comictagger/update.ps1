@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/comictagger/comictagger/releases'
+$repository = 'comictagger/comictagger'
 
 function global:au_SearchReplace {
     @{
@@ -12,28 +13,18 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # Tags look like '1.5.5' or '1.6.0-beta.6' (alpha and beta releases are packaged too).
+    # Windows asset: 'ComicTagger-<v>-Windows-AMD64.zip' (since 1.6.0-beta.6),
+    # previously 'ComicTagger-<v>-win-AMD64.exe.zip'.
+    $release = Get-GitHubReleaseAsset -Repository $repository `
+        -TagPattern '^v?\d+(\.\d+)+(-(alpha|beta)\.\d+)?$' `
+        -AssetPattern '^ComicTagger-.+-(Windows-AMD64|win-AMD64\.exe)\.zip$'
+    if (!$release) { return 'ignore' }
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
+    # Chocolatey pre-release format: '1.6.0-beta.6' -> '1.6.0-beta6'
+    $version = $release.Version -replace '-(alpha|beta)\.(\d+)$', '-$1$2'
 
-    $re  = "ComicTagger-.+-win-AMD64.exe.zip"
-
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-
-    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
-    if ($version.Contains("alpha")) { 
-        $version = $version -replace 'alpha.','alpha'
-    }
-    if ($version.Contains("beta")) { 
-        $version = $version -replace 'beta.','beta'
-    }
-
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    return @{ URL64 = $release.Url; Version = $version }
 }
 
 update -ChecksumFor 64
