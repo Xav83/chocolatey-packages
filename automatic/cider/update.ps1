@@ -12,6 +12,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+    # Package frozen: Cider 1 is archived (final release v1.6.3) and its installer has been removed
+    # from the GitHub release (download returns 404). Cider 2 is closed-source and sold on
+    # itch.io / Microsoft Store, so it cannot be packaged automatically.
+    return 'ignore'
+
     $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
 
