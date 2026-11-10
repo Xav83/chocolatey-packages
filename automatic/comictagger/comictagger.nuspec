@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>comictagger</id>
     <title>ComicTagger</title>
-    <version>1.4.3</version>
+    <version>1.6.0-beta10</version>
     <authors>ComicTagger team</authors>
     <owners>Xav83</owners>
     <summary>A multi-platform app for writing metadata to digital comics</summary>
