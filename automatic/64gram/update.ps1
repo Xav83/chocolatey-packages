@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/TDesktop-x64/tdesktop/releases'
+$repository = 'TDesktop-x64/tdesktop'
 
 function global:au_SearchReplace {
     @{
@@ -12,25 +13,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    # Several recent releases, newest first: the newest one may not ship a Windows installer (yet).
-    $tag_urls = $releases_page.Links.Href -match "/releases/tag/" | Select-Object -Unique -First 10
+    $release = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^64Gram-setup-x64[.-]v?[\d.]+\.exe$'
+    if (!$release) { return 'ignore' }
 
-    $re = '64Gram-setup-x64[.-]v?[\d.]+\.exe$'
-
-    foreach ($tag_url in $tag_urls) {
-        $expanded_assets_url = "https://github.com" + ($tag_url -replace "/tag/", "/expanded_assets/")
-        $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
-
-        $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-        if (!$url) { continue }
-
-        $version = ($tag_url -split '/' | Select-Object -Last 1) -replace '^v', ''
-        return @{ URL64 = 'https://github.com' + $url; Version = $version }
-    }
-
-    Write-Warning "No 64Gram Windows installer found in the latest releases."
-    return 'ignore'
+    return @{ URL64 = $release.Url; Version = $release.Version }
 }
 
 update -ChecksumFor 64
