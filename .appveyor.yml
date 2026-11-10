@@ -10,7 +10,6 @@ image: WMF 5
 branches:
   only:
   - develop
-  - master
 skip_tags: true
 skip_branch_with_pr: true
 #build:
