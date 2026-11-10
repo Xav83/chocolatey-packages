@@ -25,6 +25,10 @@ With over 15 years of development, there's a good chance we have the features yo
     <bugTrackerUrl>https://github.com/BiglySoftware/BiglyBT/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/BiglySoftware/BiglyBT</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/biglybt-no-java</packageSourceUrl>
+    <!-- The NoJRE installer aborts (exit code 83) when no Java runtime is installed. -->
+    <dependencies>
+      <dependency id="Temurin21jre" version="21.0.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
