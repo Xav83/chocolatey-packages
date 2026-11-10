@@ -13,20 +13,24 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # Several recent releases, newest first: the newest one may not ship a Windows installer (yet).
+    $tag_urls = $releases_page.Links.Href -match "/releases/tag/" | Select-Object -Unique -First 10
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
+    $re = '64Gram-setup-x64[.-]v?[\d.]+\.exe$'
 
-    $re  = "64Gram-setup-x64..+.exe"
+    foreach ($tag_url in $tag_urls) {
+        $expanded_assets_url = "https://github.com" + ($tag_url -replace "/tag/", "/expanded_assets/")
+        $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
+        $url = $assets_page.Links.Href -match $re | Select-Object -First 1
+        if (!$url) { continue }
 
-    $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
-    $url64 = 'https://github.com' + $url
+        $version = ($tag_url -split '/' | Select-Object -Last 1) -replace '^v', ''
+        return @{ URL64 = 'https://github.com' + $url; Version = $version }
+    }
 
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    Write-Warning "No 64Gram Windows installer found in the latest releases."
+    return 'ignore'
 }
 
 update -ChecksumFor 64
