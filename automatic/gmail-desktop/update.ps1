@@ -12,6 +12,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+    # Package frozen: Gmail Desktop is deprecated upstream. It became Meru (github.com/zoidsh/meru),
+    # which is not compatible with Gmail Desktop and needs a fresh manual install.
+    return 'ignore'
+
     $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
 
