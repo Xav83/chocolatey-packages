@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/joncampbell123/dosbox-x/releases'
+$repository = 'joncampbell123/dosbox-x'
 
 function global:au_SearchReplace {
     @{
@@ -12,20 +13,26 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # Regular release tags look like 'dosbox-x-v2026.07.02'. Other tags (e.g. the OSFREE
+    # releases, 'dosbox-x-v2026.10.01-osfree') are skipped.
+    $tag_pattern = '^dosbox-x-v\d+(\.\d+)+$'
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
+    # The package ships the XP-compatible installer 'dosbox-x-winXP-<v>-setup.exe' only.
+    $release = Get-GitHubReleaseAsset -Repository $repository -TagPattern $tag_pattern -AssetPattern '^dosbox-x-winXP-[\d.]+-setup\.exe$'
+    if (!$release) { return 'ignore' }
+    $version = $release.Tag -replace '^dosbox-x-v', ''
 
-    $re  = "dosbox-x-winXP-.+-setup.exe$"
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
+    # Warn when a newer regular release exists without an XP build: the package would otherwise
+    # silently stop being updated.
+    $windows = Get-GitHubReleaseAsset -Repository $repository -TagPattern $tag_pattern -AssetPattern '^dosbox-x-windows-[\d.]+-setup\.exe$'
+    if ($windows) {
+        $windows_version = $windows.Tag -replace '^dosbox-x-v', ''
+        if ([version]$windows_version -gt [version]$version) {
+            Write-Warning "DOSBox-X $windows_version has no winXP installer: the package stays on $version (last release with an XP build)."
+        }
+    }
 
-    $version = (($url -split '/' | Select-Object -Last 1 -Skip 1) -split '-' | Select-Object -Last 1) -replace 'v',''
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    return @{ URL64 = $release.Url; Version = $version }
 }
 
 update -ChecksumFor 64
