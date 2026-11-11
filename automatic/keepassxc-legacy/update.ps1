@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/keepassxreboot/keepassxc/releases'
+$repository = 'keepassxreboot/keepassxc'
 
 function global:au_SearchReplace {
     @{
@@ -12,17 +13,18 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    # Installer for older Windows versions (7, 8.1): 'KeePassXC-<v>-Win64-LegacyWindows.msi'
+    $release = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^KeePassXC-[\d.]+-Win64-LegacyWindows\.msi$'
+    if (!$release) { return 'ignore' }
 
-    $re  = "KeePassXC-.+-Win64-LegacyWindows.msi"
+    # KeePassXC 2.8.0 dropped the legacy installer. Warn when a newer regular release exists, so it
+    # is visible that the package stays on the last version that had a legacy build.
+    $regular = Get-GitHubReleaseAsset -Repository $repository -MaxReleases 3 -AssetPattern '^KeePassXC-[\d.]+-Win64\.msi$'
+    if ($regular -and ([version]$regular.Version -gt [version]$release.Version)) {
+        Write-Warning "KeePassXC $($regular.Version) has no LegacyWindows installer: the package stays on $($release.Version)."
+    }
 
-    $url = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
-
-    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    return @{ URL64 = $release.Url; Version = $release.Version }
 }
 
 update -ChecksumFor 64
