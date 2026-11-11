@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/conan-io/conan/releases'
+$repository = 'conan-io/conan'
 
 function global:au_SearchReplace {
     @{
@@ -14,20 +15,21 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # 64-bit installer: 'conan-<v>-windows-x86_64-installer.exe'
+    $release64 = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^conan-[\d.]+-windows-x86_64-installer\.exe$'
+    if (!$release64) { return 'ignore' }
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
+    # 32-bit installer from the same release: 'conan-<v>-windows-i686-installer.exe'
+    $release32 = Get-GitHubReleaseAsset -Repository $repository -MaxReleases 1 `
+        -TagPattern ('^' + [regex]::Escape($release64.Tag) + '$') `
+        -AssetPattern '^conan-[\d.]+-windows-i686-installer\.exe$'
 
-    $re  = "conan-.+-windows-x86_64-installer.exe"
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-
-    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
-    $url32 = 'https://github.com' + $url
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
+    $Latest = @{ URL64 = $release64.Url; Version = $release64.Version }
+    if ($release32) {
+        $Latest.URL32 = $release32.Url
+    } else {
+        Write-Warning "Conan $($release64.Version) has no 32-bit (i686) installer: the package will be 64-bit only."
+    }
     return $Latest
 }
 
