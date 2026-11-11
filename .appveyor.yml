@@ -4,7 +4,9 @@ version: '{build}'
 pull_requests:
   do_not_increment_build_number: true
 max_jobs: 1
-image: WMF 5
+# Chocolatey CLI 2.x is required: the community repository rejects non-normalized versions
+# (e.g. 4.1.0.0 instead of 4.1.0) that Chocolatey 0.10.x produces. It needs .NET 4.8.
+image: Visual Studio 2022
 # History plugin requires complete log
 #clone_depth: 5
 branches:
@@ -56,6 +58,8 @@ install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
+- ps: choco upgrade chocolatey -y --no-progress
+- ps: choco --version
 - ps: |
     git clone -q https://github.com/chocolatey-community/chocolatey-au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
