@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>hidhide</id>
     <title>HidHide</title>
-    <version>1.2.98</version>
+    <version>1.5.230.0</version>
     <authors>Virtual Gamepad Emulation Framework</authors>
     <owners>Xav83</owners>
     <summary>Gaming Input Peripherals Device Firewall for Windows</summary>
