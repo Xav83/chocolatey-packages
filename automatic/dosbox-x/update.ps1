@@ -20,13 +20,15 @@ function global:au_GetLatest {
     # The package ships the XP-compatible installer 'dosbox-x-winXP-<v>-setup.exe' only.
     $release = Get-GitHubReleaseAsset -Repository $repository -TagPattern $tag_pattern -AssetPattern '^dosbox-x-winXP-[\d.]+-setup\.exe$'
     if (!$release) { return 'ignore' }
-    $version = $release.Tag -replace '^dosbox-x-v', ''
+    # Chocolatey normalizes versions: '2025.05.03' is looked up as '2025.5.3', so a package pushed
+    # with leading zeros can't be found (that made the verifier reject 2025.x). Drop them.
+    $version = ($release.Tag -replace '^dosbox-x-v', '') -replace '(^|\.)0+(?=\d)', '$1'
 
     # Warn when a newer regular release exists without an XP build: the package would otherwise
     # silently stop being updated.
     $windows = Get-GitHubReleaseAsset -Repository $repository -TagPattern $tag_pattern -AssetPattern '^dosbox-x-windows-[\d.]+-setup\.exe$'
     if ($windows) {
-        $windows_version = $windows.Tag -replace '^dosbox-x-v', ''
+        $windows_version = ($windows.Tag -replace '^dosbox-x-v', '') -replace '(^|\.)0+(?=\d)', '$1'
         if ([version]$windows_version -gt [version]$version) {
             Write-Warning "DOSBox-X $windows_version has no winXP installer: the package stays on $version (last release with an XP build)."
         }
