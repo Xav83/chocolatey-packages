@@ -2,6 +2,8 @@
 
 param( [string[]] $Name, [string] $Root = "$PSScriptRoot" )
 
+Import-Module chocolatey-au
+
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 $global:au_root = Resolve-Path $Root
 

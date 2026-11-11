@@ -18,8 +18,6 @@ skip_branch_with_pr: true
 #  verbosity: minimal
 
 environment:
-  # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
-  au_version: master
   au_push: true
   # Force test: use 1 to test all, or N to split testing into N groups
   au_test_groups: 1
@@ -60,9 +58,9 @@ install:
 - git --version
 - ps: choco upgrade chocolatey -y --no-progress
 - ps: choco --version
-- ps: |
-    git clone -q https://github.com/chocolatey-community/chocolatey-au.git $Env:TEMP/au
-    . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
+# Install the released chocolatey-au module (building it from source fails on this image:
+# GitVersion "HEAD has moved after repo normalisation").
+- ps: choco install chocolatey-au -y --no-progress
 
 - ps: |
     "Build info"

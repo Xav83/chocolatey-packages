@@ -2,6 +2,8 @@
 
 param([string] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\automatic")
 
+Import-Module chocolatey-au
+
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
 $Options = [ordered]@{
