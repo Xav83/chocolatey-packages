@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>biglybt-no-java</id>
     <title>BiglyBT</title>
-    <version>3.1.0</version>
+    <version>4.1.0.0</version>
     <authors>Bigly Software</authors>
     <owners>Xav83</owners>
     <summary>Feature-filled Bittorrent client based on the Azureus open source project</summary>
