@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>internxt-drive</id>
     <title>Internxt Drive</title>
-    <version>1.9.1</version>
+    <version>2.7.2</version>
     <authors>ankurk91</authors>
     <owners>Xav83</owners>
     <summary>The safest cloud storage for all your files, photos, and more.</summary>
