@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>switchhosts</id>
     <title>SwitchHosts</title>
-    <version>4.1.2</version>
+    <version>5.0.3</version>
     <authors>oldj</authors>
     <owners>Xav83</owners>
     <summary>Switch hosts quickly!</summary>
