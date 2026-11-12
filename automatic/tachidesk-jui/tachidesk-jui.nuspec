@@ -4,11 +4,11 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>tachidesk-jui</id>
-    <title>Tachidesk-JUI</title>
+    <title>Suwayomi-JUI (formerly Tachidesk-JUI)</title>
     <version>1.3.0</version>
     <authors>Suwayomi</authors>
     <owners>Xav83</owners>
-    <summary>A Tachidesk Client built in Compose Multiplatform</summary>
+    <summary>A Suwayomi-Server client built in Compose Multiplatform</summary>
     <description>
 A free and open source manga reader to read manga from a Tachidesk-Server instance.
 Tachidesk-JUI can run Tachidesk-Server on its own on desktop platforms, or connect to an already hosted server.
@@ -16,19 +16,19 @@ Tachidesk-JUI can run Tachidesk-Server on its own on desktop platforms, or conne
 Android and any desktop platform that runs Java can run it.
 On most platforms are binaries available if you don't want to install Java yourself.
     </description>
-    <projectUrl>https://github.com/Suwayomi/Tachidesk-JUI</projectUrl>
-    <tags>android kotlin manga desktop tachiyomi jetpack-compose jetbrains-compose compose-desktop compose-for-desktop tachidesk compose-multiplatform</tags>
+    <projectUrl>https://github.com/Suwayomi/Suwayomi-JUI</projectUrl>
+    <tags>android kotlin manga desktop tachiyomi jetpack-compose jetbrains-compose compose-desktop compose-for-desktop tachidesk suwayomi compose-multiplatform</tags>
     <iconUrl>https://rawcdn.githack.com/Suwayomi/Tachidesk-JUI/0e6ce98d470615bd854e4c40867e2d4c213494fc/resources/icon.png</iconUrl>
     <copyright>Copyright (C) 2020-2022 Syer and contributors</copyright>
-    <licenseUrl>https://github.com/Suwayomi/Tachidesk-JUI/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/Suwayomi/Suwayomi-JUI/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Release Notes](https://github.com/Suwayomi/Tachidesk-JUI/releases)</releaseNotes>
-    <docsUrl>https://github.com/Suwayomi/Tachidesk-JUI/blob/master/README.md</docsUrl>
-    <bugTrackerUrl>https://github.com/Suwayomi/Tachidesk-JUI/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/Suwayomi/Tachidesk-JUI</projectSourceUrl>
+    <releaseNotes>[Release Notes](https://github.com/Suwayomi/Suwayomi-JUI/releases)</releaseNotes>
+    <docsUrl>https://github.com/Suwayomi/Suwayomi-JUI/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/Suwayomi/Suwayomi-JUI/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/Suwayomi/Suwayomi-JUI</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/tachidesk-jui</packageSourceUrl>
   </metadata>
   <files>

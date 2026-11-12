@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/Suwayomi/Tachidesk-JUI/releases'
+$repository = 'Suwayomi/Suwayomi-JUI'
 
 function global:au_SearchReplace {
     @{
@@ -12,21 +13,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # Windows installer: 'Suwayomi-JUI-windows-x64-<v>.msi' (before the Tachidesk -> Suwayomi
+    # rename: 'Tachidesk-JUI-windows-x64-<v>.msi')
+    $release = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^(Suwayomi|Tachidesk)-JUI-windows-x64-[\d.]+\.msi$'
+    if (!$release) { return 'ignore' }
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
-
-    $re  = "Tachidesk-JUI-windows-x64-.+.msi"
-
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-
-    $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    return @{ URL64 = $release.Url; Version = $release.Version }
 }
 
 update -ChecksumFor 64
