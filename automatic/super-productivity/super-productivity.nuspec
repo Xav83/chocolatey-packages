@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>super-productivity</id>
     <title>Super Productivity</title>
-    <version>20.0.0</version>
+    <version>20.0.0.20261112</version>
     <authors>johannesjo</authors>
     <owners>Xav83</owners>
     <summary>Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities.</summary>
