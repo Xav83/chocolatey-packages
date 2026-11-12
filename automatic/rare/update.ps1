@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/Dummerle/Rare/releases'
+$repository = 'RareDevs/Rare'
 
 function global:au_SearchReplace {
     @{
@@ -12,24 +13,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # MSI installer for x64. Releases also ship 'Rare-<v>-arm64.msi', which must never be picked.
+    $release = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^Rare-[\d.]+(-(x64|amd64|x86_64))?\.msi$'
+    if (!$release) { return 'ignore' }
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
-
-    $re  = "Rare-.+.msi"
-
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-
-    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
-    if ($version.Contains("rc.")) { 
-        $version = $version -replace 'rc.','rc'
-    }
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    return @{ URL64 = $release.Url; Version = $release.Version }
 }
 
 update -ChecksumFor 64
