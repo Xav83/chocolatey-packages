@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>qrcp</id>
     <title>qrcp</title>
-    <version>0.9.1</version>
+    <version>0.11.7</version>
     <authors>claudiodangelis</authors>
     <owners>Xav83</owners>
     <summary>Transfer files over wifi from your computer to your mobile device by scanning a QR code without leaving the terminal.</summary>
