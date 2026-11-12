@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/claudiodangelis/qrcp/releases'
+$repository = 'claudiodangelis/qrcp'
 
 function global:au_SearchReplace {
     @{
@@ -14,22 +15,17 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # Tags are '0.11.3' or, since 0.11.6, 'v0.11.6': the helper strips the 'v' from the version.
+    $release64 = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^qrcp_[\d.]+_windows_amd64\.tar\.gz$'
+    if (!$release64) { return 'ignore' }
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
+    # 32-bit archive from the same release
+    $release32 = Get-GitHubReleaseAsset -Repository $repository -MaxReleases 1 `
+        -TagPattern ('^' + [regex]::Escape($release64.Tag) + '$') `
+        -AssetPattern '^qrcp_[\d.]+_windows_386\.tar\.gz$'
+    if (!$release32) { return 'ignore' }
 
-    $re  = "qrcp_.+_windows_(amd64|386).tar.gz"
-
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 2
-
-    $version = $url[0] -split '/' | Select-Object -Last 1 -Skip 1
-    $url32 = 'https://github.com' + $url[0]
-    $url64 = 'https://github.com' + $url[1]
-
-    $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
-    return $Latest
+    return @{ URL32 = $release32.Url; URL64 = $release64.Url; Version = $release64.Version }
 }
 
 update
