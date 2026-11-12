@@ -12,6 +12,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+    # Package frozen: replaced by the 'tachidesk-jui' package (same app) since October 2022.
+    return 'ignore'
+
     $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
 
