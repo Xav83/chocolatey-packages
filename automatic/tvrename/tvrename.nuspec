@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>tvrename</id>
     <title>TV Rename</title>
-    <version>4.6.7</version>
+    <version>5.2.7</version>
     <authors>TV-Rename</authors>
     <owners>Xav83</owners>
     <summary>Organise your TV videos with ease</summary>
