@@ -59,6 +59,6 @@ function global:Get-GitHubReleaseAsset {
         }
     }
 
-    Write-Warning "No release of $Repository with a tag matching '$TagPattern' and an asset matching '$AssetPattern' among the $MaxReleases latest releases."
+    Write-Host "WARNING: No release of $Repository with a tag matching '$TagPattern' and an asset matching '$AssetPattern' among the $MaxReleases latest releases."
     return $null
 }

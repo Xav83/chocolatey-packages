@@ -28,7 +28,7 @@ function global:au_GetLatest {
     if ($release32) {
         $Latest.URL32 = $release32.Url
     } else {
-        Write-Warning "Conan $($release64.Version) has no 32-bit (i686) installer: the package will be 64-bit only."
+        Write-Host "WARNING: Conan $($release64.Version) has no 32-bit (i686) installer: the package will be 64-bit only."
     }
     return $Latest
 }

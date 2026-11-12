@@ -30,7 +30,7 @@ function global:au_GetLatest {
     if ($windows) {
         $windows_version = ($windows.Tag -replace '^dosbox-x-v', '') -replace '(^|\.)0+(?=\d)', '$1'
         if ([version]$windows_version -gt [version]$version) {
-            Write-Warning "DOSBox-X $windows_version has no winXP installer: the package stays on $version (last release with an XP build)."
+            Write-Host "WARNING: DOSBox-X $windows_version has no winXP installer: the package stays on $version (last release with an XP build)."
         }
     }
 

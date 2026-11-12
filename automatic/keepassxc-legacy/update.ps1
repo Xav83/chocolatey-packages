@@ -21,7 +21,7 @@ function global:au_GetLatest {
     # is visible that the package stays on the last version that had a legacy build.
     $regular = Get-GitHubReleaseAsset -Repository $repository -MaxReleases 3 -AssetPattern '^KeePassXC-[\d.]+-Win64\.msi$'
     if ($regular -and ([version]$regular.Version -gt [version]$release.Version)) {
-        Write-Warning "KeePassXC $($regular.Version) has no LegacyWindows installer: the package stays on $($release.Version)."
+        Write-Host "WARNING: KeePassXC $($regular.Version) has no LegacyWindows installer: the package stays on $($release.Version)."
     }
 
     return @{ URL64 = $release.Url; Version = $release.Version }
