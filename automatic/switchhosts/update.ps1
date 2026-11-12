@@ -1,32 +1,31 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/oldj/SwitchHosts/releases'
+$repository = 'oldj/SwitchHosts'
 
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
             "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
             "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
+            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
         }
      }
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # SwitchHosts 5 installers: 'SwitchHosts-<v>-windows-x64-setup.exe' / '...-windows-x86-setup.exe'
+    # (also shown as 'SwitchHosts_<v>_x64-setup.exe'). The arm64 build must never be picked.
+    $release64 = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^SwitchHosts[-_][\d.]+[-_](windows-)?x64-setup\.exe$'
+    if (!$release64) { return 'ignore' }
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
+    $release32 = Get-GitHubReleaseAsset -Repository $repository -MaxReleases 1 `
+        -TagPattern ('^' + [regex]::Escape($release64.Tag) + '$') `
+        -AssetPattern '^SwitchHosts[-_][\d.]+[-_](windows-)?x86-setup\.exe$'
+    if (!$release32) { return 'ignore' }
 
-    $re  = "SwitchHosts_windows_installer_.+.exe"
-
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-
-    $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    return @{ URL32 = $release32.Url; URL64 = $release64.Url; Version = $release64.Version }
 }
 
-update -ChecksumFor 64
+update
