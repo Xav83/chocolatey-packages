@@ -18,8 +18,9 @@ function global:au_GetLatest {
     if (!$release) { return 'ignore' }
 
     # KeePassXC 2.8.0 dropped the legacy installer. Warn when a newer regular release exists, so it
-    # is visible that the package stays on the last version that had a legacy build.
-    $regular = Get-GitHubReleaseAsset -Repository $repository -MaxReleases 3 -AssetPattern '^KeePassXC-[\d.]+-Win64\.msi$'
+    # is visible that the package stays on the last version that had a legacy build. Any Windows
+    # download counts, as 2.8.0 renamed its installers.
+    $regular = Get-GitHubReleaseAsset -Repository $repository -MaxReleases 3 -AssetPattern '^KeePassXC-[\d.]+.*\.(msi|exe|zip)$'
     if ($regular -and ([version]$regular.Version -gt [version]$release.Version)) {
         Write-Host "WARNING: KeePassXC $($regular.Version) has no LegacyWindows installer: the package stays on $($release.Version)."
     }
