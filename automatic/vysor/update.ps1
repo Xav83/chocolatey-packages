@@ -1,6 +1,7 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/koush/vysor.io/releases'
+$repository = 'koush/vysor.io'
 
 function global:au_SearchReplace {
     @{
@@ -12,21 +13,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # Windows installer: 'Vysor-<v>.Setup.exe' (6.x), previously 'Vysor-win-<v>.exe'.
+    $release = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^Vysor-(win-)?[\d.]+?(\.Setup)?\.exe$'
+    if (!$release) { return 'ignore' }
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
-
-    $re  = "Vysor-win-.+.exe"
-
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-
-    $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    return @{ URL64 = $release.Url; Version = $release.Version }
 }
 
 update -ChecksumFor 64
