@@ -17,7 +17,9 @@ function global:au_GetLatest {
     $release = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^TVRename-v?[\d.]+(-Installer)?\.exe$'
     if (!$release) { return 'ignore' }
 
-    return @{ URL32 = $release.Url; Version = $release.Version }
+    $Latest = @{ URL32 = $release.Url; Version = $release.Version }
+    Set-ReleaseChecksum -Latest $Latest -Release $release -Arch 32
+    return $Latest
 }
 
 update -ChecksumFor 32

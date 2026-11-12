@@ -25,8 +25,10 @@ function global:au_GetLatest {
         -AssetPattern '^conan-[\d.]+-windows-i686-installer\.exe$'
 
     $Latest = @{ URL64 = $release64.Url; Version = $release64.Version }
+    Set-ReleaseChecksum -Latest $Latest -Release $release64 -Arch 64
     if ($release32) {
         $Latest.URL32 = $release32.Url
+        Set-ReleaseChecksum -Latest $Latest -Release $release32 -Arch 32
     } else {
         Write-Host "WARNING: Conan $($release64.Version) has no 32-bit (i686) installer: the package will be 64-bit only."
     }

@@ -24,7 +24,9 @@ function global:au_GetLatest {
     # Chocolatey pre-release format: '1.6.0-beta.6' -> '1.6.0-beta6'
     $version = $release.Version -replace '-(alpha|beta)\.(\d+)$', '-$1$2'
 
-    return @{ URL64 = $release.Url; Version = $version }
+    $Latest = @{ URL64 = $release.Url; Version = $version }
+    Set-ReleaseChecksum -Latest $Latest -Release $release -Arch 64
+    return $Latest
 }
 
 update -ChecksumFor 64

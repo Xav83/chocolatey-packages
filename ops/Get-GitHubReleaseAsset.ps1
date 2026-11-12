@@ -13,12 +13,17 @@ function global:Get-GitHubReleaseAsset {
         such as 'v4.x.x', nightlies, release candidates...) are skipped, and so are
         releases that do not ship an asset matching AssetPattern (yet).
 
-        Returns a hashtable @{ Version; Url; Tag } for the first match, or $null.
+        Returns a hashtable @{ Version; Url; Tag; Checksum; ChecksumType } for the first match,
+        or $null. Checksum is the SHA256 digest GitHub shows for the asset (assets uploaded since
+        mid-2025 have one); it is empty when GitHub has no digest, in which case AU computes the
+        checksum by downloading the file, as usual. Pass the result to Set-ReleaseChecksum to use it.
 
     .EXAMPLE
         $release = Get-GitHubReleaseAsset -Repository 'setvisible/ArrowDL' -AssetPattern '^ArrowDL_x64_Setup\.exe$'
         if (!$release) { return 'ignore' }
-        @{ URL64 = $release.Url; Version = $release.Version }
+        $Latest = @{ URL64 = $release.Url; Version = $release.Version }
+        Set-ReleaseChecksum -Latest $Latest -Release $release -Arch 64
+        return $Latest
     #>
     param(
         # Repository as 'owner/name'.
@@ -54,11 +59,63 @@ function global:Get-GitHubReleaseAsset {
             $file_name = $href -split '/' | Select-Object -Last 1
             if ($file_name -match $AssetPattern) {
                 $url = if ($href.StartsWith('http')) { $href } else { 'https://github.com' + $href }
-                return @{ Version = ($tag -replace '^v', ''); Url = $url; Tag = $tag }
+                $checksum = Get-GitHubAssetDigest -Html $assets_page.Content -Href $href
+                return @{
+                    Version      = ($tag -replace '^v', '')
+                    Url          = $url
+                    Tag          = $tag
+                    Checksum     = $checksum
+                    ChecksumType = $(if ($checksum) { 'sha256' } else { '' })
+                }
             }
         }
     }
 
     Write-Host "WARNING: No release of $Repository with a tag matching '$TagPattern' and an asset matching '$AssetPattern' among the $MaxReleases latest releases."
     return $null
+}
+
+function global:Get-GitHubAssetDigest {
+    <#
+    .SYNOPSIS
+        Returns the SHA256 digest GitHub shows next to an asset on a release's asset list, or ''.
+    .DESCRIPTION
+        Looks for 'sha256:<64 hex digits>' in the list item (<li>) that contains the asset's link.
+    #>
+    param([string] $Html, [string] $Href)
+
+    if (!$Html -or !$Href) { return '' }
+    $index = $Html.IndexOf($Href)
+    if ($index -lt 0) { return '' }
+
+    $start = $Html.LastIndexOf('<li', $index)
+    $end = $Html.IndexOf('</li>', $index)
+    if ($start -lt 0) { $start = 0 }
+    if ($end -lt 0) { $end = $Html.Length }
+
+    $item = $Html.Substring($start, $end - $start)
+    if ($item -match 'sha256:([0-9a-fA-F]{64})') { return $Matches[1].ToLower() }
+    return ''
+}
+
+function global:Set-ReleaseChecksum {
+    <#
+    .SYNOPSIS
+        Copies the GitHub digest of a release asset into AU's $Latest, for the given architecture.
+    .DESCRIPTION
+        When the digest is known, AU can use it instead of downloading the file to compute the
+        checksum. When it is not, $Latest is left unchanged and AU computes the checksum itself.
+    .EXAMPLE
+        Set-ReleaseChecksum -Latest $Latest -Release $release64 -Arch 64
+    #>
+    param(
+        [Parameter(Mandatory = $true)] [hashtable] $Latest,
+        $Release,
+        [ValidateSet('32', '64')] [string] $Arch = '64'
+    )
+
+    if ($Release -and $Release.Checksum) {
+        $Latest["Checksum$Arch"]     = $Release.Checksum
+        $Latest["ChecksumType$Arch"] = $Release.ChecksumType
+    }
 }

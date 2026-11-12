@@ -18,6 +18,10 @@ Nothing to do here, jobs run automatically by AppVeyor on commit and on a schedu
 function global:au_GetLatest {
     $release = Get-GitHubReleaseAsset -Repository 'owner/name' -AssetPattern '^App-Setup-x64\.exe$'
     if (!$release) { return 'ignore' }
-    return @{ URL64 = $release.Url; Version = $release.Version }
+    $Latest = @{ URL64 = $release.Url; Version = $release.Version }
+    Set-ReleaseChecksum -Latest $Latest -Release $release -Arch 64   # use GitHub's SHA256 digest when available
+    return $Latest
 }
 ```
+
+`Set-ReleaseChecksum` copies the SHA256 digest GitHub shows for the asset into `$Latest`, so AU skips downloading the installer just to compute its checksum ("Automatic checksum skipped" in the log). Assets without a digest are downloaded and checksummed by AU as before.

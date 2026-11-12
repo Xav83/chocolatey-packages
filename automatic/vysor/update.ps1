@@ -17,7 +17,9 @@ function global:au_GetLatest {
     $release = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^Vysor-(win-)?[\d.]+?(\.Setup)?\.exe$'
     if (!$release) { return 'ignore' }
 
-    return @{ URL64 = $release.Url; Version = $release.Version }
+    $Latest = @{ URL64 = $release.Url; Version = $release.Version }
+    Set-ReleaseChecksum -Latest $Latest -Release $release -Arch 64
+    return $Latest
 }
 
 update -ChecksumFor 64

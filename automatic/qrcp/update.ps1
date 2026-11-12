@@ -25,7 +25,10 @@ function global:au_GetLatest {
         -AssetPattern '^qrcp_[\d.]+_windows_386\.tar\.gz$'
     if (!$release32) { return 'ignore' }
 
-    return @{ URL32 = $release32.Url; URL64 = $release64.Url; Version = $release64.Version }
+    $Latest = @{ URL32 = $release32.Url; URL64 = $release64.Url; Version = $release64.Version }
+    Set-ReleaseChecksum -Latest $Latest -Release $release32 -Arch 32
+    Set-ReleaseChecksum -Latest $Latest -Release $release64 -Arch 64
+    return $Latest
 }
 
 update

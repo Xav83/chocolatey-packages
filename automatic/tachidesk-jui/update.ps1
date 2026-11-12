@@ -18,7 +18,9 @@ function global:au_GetLatest {
     $release = Get-GitHubReleaseAsset -Repository $repository -AssetPattern '^(Suwayomi|Tachidesk)-JUI-windows-x64-[\d.]+\.msi$'
     if (!$release) { return 'ignore' }
 
-    return @{ URL64 = $release.Url; Version = $release.Version }
+    $Latest = @{ URL64 = $release.Url; Version = $release.Version }
+    Set-ReleaseChecksum -Latest $Latest -Release $release -Arch 64
+    return $Latest
 }
 
 update -ChecksumFor 64

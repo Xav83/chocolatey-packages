@@ -25,7 +25,9 @@ function global:au_GetLatest {
         Write-Host "WARNING: KeePassXC $($regular.Version) has no LegacyWindows installer: the package stays on $($release.Version)."
     }
 
-    return @{ URL64 = $release.Url; Version = $release.Version }
+    $Latest = @{ URL64 = $release.Url; Version = $release.Version }
+    Set-ReleaseChecksum -Latest $Latest -Release $release -Arch 64
+    return $Latest
 }
 
 update -ChecksumFor 64
