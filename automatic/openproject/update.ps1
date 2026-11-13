@@ -1,6 +1,8 @@
 import-module chocolatey-au
 
-$releases = 'https://github.com/opf/openproject/releases'
+# OpenProject publishes no Windows build: this package ships the source archive of each release
+# (as requested in https://github.com/chocolatey-community/chocolatey-package-requests/issues/1015).
+$repository = 'opf/openproject'
 
 function global:au_SearchReplace {
     @{
@@ -12,20 +14,24 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    $releases_page = Invoke-WebRequest -Uri "https://github.com/$repository/releases" -UseBasicParsing
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
+    $tag_prefix = "/$repository/releases/tag/"
+    $tag = $releases_page.Links.Href |
+        Where-Object { $_ -and $_.StartsWith($tag_prefix) } |
+        ForEach-Object { $_.Substring($tag_prefix.Length) } |
+        Where-Object { $_ -match '^v\d+(\.\d+)+$' } |
+        Select-Object -First 1
 
-    $re  = "v.+.zip"
+    if (!$tag) {
+        Write-Host "WARNING: No release of $repository with a plain version tag found."
+        return 'ignore'
+    }
 
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-
-    $version = (($url -split '/' | Select-Object -Last 1) -replace 'v','') -replace '.zip',''
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
+    $Latest = @{
+        URL64   = "https://github.com/$repository/archive/refs/tags/$tag.zip"
+        Version = $tag -replace '^v', ''
+    }
     return $Latest
 }
 

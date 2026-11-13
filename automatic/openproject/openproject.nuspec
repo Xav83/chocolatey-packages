@@ -4,19 +4,25 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>openproject</id>
-    <title>OpenProject</title>
-    <version>12.2.2</version>
+    <title>OpenProject (source code)</title>
+    <version>17.9.7</version>
     <authors>OpenProject</authors>
     <owners>Xav83</owners>
-    <summary>OpenProject is the leading open source project management software.</summary>
-    <description>
-Open source project management software
-Efficient classic, agile or hybrid project management in a secure environment.
-    </description>
+    <summary>Source code of OpenProject, the open source project management software. Does not install a runnable server: use Docker to run OpenProject on Windows.</summary>
+    <description><![CDATA[OpenProject is open source project management software: efficient classic, agile or hybrid project management in a secure environment.
+
+## What this package installs
+
+**This package contains the source code of OpenProject** (the source archive of each GitHub release), extracted to `%ChocolateyInstall%\lib\openproject\tools`.
+It does **not** install a runnable OpenProject server: there is no executable, no Windows service and no web server.
+
+OpenProject does not support Windows natively. To run it on Windows, use the official Docker image (Docker Desktop with the WSL2 backend):
+see the [Docker installation guide](https://www.openproject.org/docs/installation-and-operations/installation/docker/).
+]]></description>
     <projectUrl>https://www.openproject.org</projectUrl>
-    <tags>ruby project-planning roadmap angular timeline bug-tracker issue-tracker project-management kanban scrum ifc openproject gantt-chart workflows gantt boards bcf</tags>
+    <tags>ruby source-code project-planning roadmap angular timeline bug-tracker issue-tracker project-management kanban scrum ifc openproject gantt-chart workflows gantt boards bcf</tags>
     <iconUrl>https://rawcdn.githack.com/opf/openproject/754fc7bfb07a18de41b0f3a17d3340b3e3730911/app/assets/images/logo_openproject.png</iconUrl>
-    <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
+    <copyright>OpenProject GmbH</copyright>
     <licenseUrl>https://github.com/opf/openproject/blob/dev/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
