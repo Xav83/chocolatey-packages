@@ -13,6 +13,9 @@
 Decentralized, open-source (MIT), C/C++ package manager.
 
 ### Package Specific
+
+This package installs Conan's official Windows installer, a self-contained build that embeds its own Python interpreter. It cannot import Python modules installed with `pip` into another Python installation, so recipes that need extra Python packages will fail with it. In that case, install Conan with pip instead: `python -m pip install conan`.
+
 #### Package Parameters
 
 The following package parameters can be set:
