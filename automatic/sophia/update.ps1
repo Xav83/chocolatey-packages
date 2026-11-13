@@ -1,32 +1,56 @@
 import-module chocolatey-au
+. "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
-$releases = 'https://github.com/farag2/Sophia-Script-for-Windows/releases'
+# Each Sophia Script release ships one zip per Windows edition. The package version is the release tag
+# (= the Windows 11 script version), and the install script picks the zip matching the user's Windows:
+#   Windows 10       'Sophia.Script.for.Windows.10.v<version>.zip'      (its own version, e.g. 7.1.0)
+#   Windows 11       'Sophia.Script.for.Windows.11.v<version>.zip'
+#   Windows 11 Arm   'Sophia.Script.for.Windows.11.Arm.v<version>.zip'
+$repository = 'farag2/Sophia-Script-for-Windows'
+
+$editions = [ordered]@{
+    'Win10'    = '^Sophia\.Script\.for\.Windows\.10\.v[\d.]+\.zip$'
+    'Win11'    = '^Sophia\.Script\.for\.Windows\.11\.v[\d.]+\.zip$'
+    'Win11Arm' = '^Sophia\.Script\.for\.Windows\.11\.Arm\.v[\d.]+\.zip$'
+}
 
 function global:au_SearchReplace {
-    @{
-        'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+    $replacements = @{}
+    foreach ($edition in $editions.Keys) {
+        $replacements["(^[$]url$edition\s*=\s*)('.*')"]      = "`$1'$($Latest["URL$edition"])'"
+        $replacements["(^[$]checksum$edition\s*=\s*)('.*')"] = "`$1'$($Latest["Checksum$edition"])'"
+    }
+    @{ 'tools\chocolateyInstall.ps1' = $replacements }
+}
+
+function global:au_BeforeUpdate {
+    # Use GitHub's SHA256 digests; download and hash only the zips that have none.
+    foreach ($edition in $editions.Keys) {
+        if (!$Latest["Checksum$edition"]) {
+            $Latest["Checksum$edition"] = Get-RemoteChecksum $Latest["URL$edition"]
         }
-     }
+    }
 }
 
 function global:au_GetLatest {
-    $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    # The Windows 11 zip decides the release (and the package version)...
+    $win11 = Get-GitHubReleaseAsset -Repository $repository -AssetPattern $editions['Win11']
+    if (!$win11) { return 'ignore' }
 
-    $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
-    $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
+    $Latest = @{ Version = $win11.Version; URLWin11 = $win11.Url; ChecksumWin11 = $win11.Checksum }
 
-    $re  = "Sophia.Script.for.Windows.10.v.+.zip"
-
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
-
-    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
-    $url64 = 'https://github.com' + $url
-
-    $Latest = @{ URL64 = $url64; Version = $version }
+    # ...and the other editions must come from the same release.
+    $same_tag = '^' + [regex]::Escape($win11.Tag) + '$'
+    foreach ($edition in @('Win10', 'Win11Arm')) {
+        $release = Get-GitHubReleaseAsset -Repository $repository -MaxReleases 1 -TagPattern $same_tag -AssetPattern $editions[$edition]
+        if (!$release) {
+            Write-Host "WARNING: Sophia Script $($win11.Version) has no $edition zip: not updating."
+            return 'ignore'
+        }
+        $Latest["URL$edition"]      = $release.Url
+        $Latest["Checksum$edition"] = $release.Checksum
+    }
     return $Latest
 }
 
-update -ChecksumFor 64
+update -ChecksumFor none

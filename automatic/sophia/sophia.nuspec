@@ -5,13 +5,21 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>sophia</id>
     <title>Sophia Script for Windows</title>
-    <version>6.1.4</version>
+    <version>8.1.0</version>
     <authors>farag2</authors>
     <owners>Xav83</owners>
     <summary>The most powerful PowerShell module on GitHub for Windows 10 and Windows 11 fine-tuning and tweaking</summary>
-    <description>
-Sophia Script for Windows is the largest PowerShell module on GitHub for Windows 10 and Windows 11 fine-tuning and automating the routine tasks
-    </description>
+    <description><![CDATA[Sophia Script for Windows is the largest PowerShell module on GitHub for Windows 10 and Windows 11 fine-tuning and automating the routine tasks.
+
+## Editions
+
+Sophia Script ships one edition per Windows version. This package installs the edition matching your system:
+
+- **Windows 11** (x64 or Arm): the Windows 11 script, whose version is the package version;
+- **Windows 10**: the Windows 10 script, which has its own version number (for example 7.1.0 for package 8.1.0).
+
+The LTSC and PowerShell 7 editions are not installed by this package; download them from the [releases page](https://github.com/farag2/Sophia-Script-for-Windows/releases).
+]]></description>
     <projectUrl>https://github.com/farag2/Sophia-Script-for-Windows</projectUrl>
     <tags>windows gui script powershell tweaks windows-10 sophia 2004 debloat debloating ltsc windows-11 debloater windows-debloat 20h1 20h2 sophia-script 21h1 21h2 22h2</tags>
     <iconUrl>https://rawcdn.githack.com/farag2/Sophia-Script-for-Windows/a20eeaa782f62886b0f93dce2580537dc16c1654/img/Sophia.png</iconUrl>
