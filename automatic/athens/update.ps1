@@ -12,6 +12,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+    # Athens is no longer maintained: the repository was archived by its authors and there will be no new
+    # release (https://github.com/athensresearch/athens). The package stays frozen at its last version.
+    return 'ignore'
+
     $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
 
