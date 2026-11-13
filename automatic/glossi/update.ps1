@@ -12,6 +12,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+    # GlosSI is no longer maintained: the repository was archived by its author in Nov 2025, and
+    # 0.1.3.0 is the last (dev-snapshot) release (https://github.com/Alia5/GlosSI). The package stays frozen.
+    return 'ignore'
+
     $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
 
