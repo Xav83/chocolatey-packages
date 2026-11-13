@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>openproject</id>
     <title>OpenProject (source code)</title>
-    <version>17.9.7</version>
+    <version>17.9.7.20261113</version>
     <authors>OpenProject</authors>
     <owners>Xav83</owners>
     <summary>Source code of OpenProject, the open source project management software. Does not install a runnable server: use Docker to run OpenProject on Windows.</summary>

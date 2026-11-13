@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url64       = ''
-$checksum64  = ''
+$url64       = 'https://github.com/opf/openproject/archive/refs/tags/v17.9.7.zip'
+$checksum64  = '7d70814e415ab45626827b2b70237febf6da979beaef291da21211a560921e2a'
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
