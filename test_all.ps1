@@ -8,14 +8,14 @@ if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 $global:au_root = Resolve-Path $Root
 
 if (($Name.Length -gt 0) -and ($Name[0] -match '^random (.+)')) {
-    [array] $lsau = lsau
+    [array] $lsau = Get-AUPackages
 
     $group = [int]$Matches[1]
     $n = (Get-Random -Maximum $group)
     Write-Host "TESTING GROUP $($n+1) of $group"
 
     $group_size = [int]($lsau.Count / $group) + 1
-    $Name = $lsau | select -First $group_size -Skip ($group_size*$n) | % { $_.Name }
+    $Name = $lsau | Select-Object -First $group_size -Skip ($group_size*$n) | ForEach-Object { $_.Name }
 
     Write-Host ($Name -join ' ')
     Write-Host ('-'*80)
@@ -45,4 +45,4 @@ $options = [ordered]@{
 }
 
 
-$global:info = updateall -Name $Name -Options $Options
+$global:info = Update-AUPackages -Name $Name -Options $Options
