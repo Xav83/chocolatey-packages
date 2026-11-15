@@ -1,4 +1,4 @@
-# WMF 3/4 only
+﻿# WMF 3/4 only
 if ($PSVersionTable.PSVersion -lt $(New-Object System.Version("5.0.0.0"))) {
   choco install dotnet4.5.1 -y
   choco upgrade powershell-packagemanagement --ignore-dependencies -y

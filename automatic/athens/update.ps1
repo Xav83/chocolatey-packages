@@ -1,4 +1,4 @@
-import-module chocolatey-au
+﻿import-module chocolatey-au
 
 $releases = 'https://github.com/athensresearch/athens/releases'
 
@@ -27,7 +27,7 @@ function global:au_GetLatest {
     $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
     $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
-    if ($version.Contains("beta")) { 
+    if ($version.Contains("beta")) {
         $version = $version -replace 'beta.','beta'
     }
 

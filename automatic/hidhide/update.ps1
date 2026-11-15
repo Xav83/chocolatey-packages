@@ -1,4 +1,4 @@
-import-module chocolatey-au
+﻿import-module chocolatey-au
 
 $releases = 'https://github.com/ViGEm/HidHide/releases'
 
@@ -23,7 +23,7 @@ function global:au_GetLatest {
     $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
     $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
-    
+
     $url64 = 'https://github.com' + $url
 
     $Latest = @{ URL64 = $url64; Version = $version }

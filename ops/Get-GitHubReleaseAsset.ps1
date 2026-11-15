@@ -1,4 +1,4 @@
-# Shared helper for AU update scripts (automatic/<package>/update.ps1).
+﻿# Shared helper for AU update scripts (automatic/<package>/update.ps1).
 # Dot-source it from an update script:
 #   . "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 

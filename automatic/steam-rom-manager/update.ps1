@@ -1,4 +1,4 @@
-import-module chocolatey-au
+﻿import-module chocolatey-au
 
 $releases = 'https://github.com/SteamGridDB/steam-rom-manager/releases'
 

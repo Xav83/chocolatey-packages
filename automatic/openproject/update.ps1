@@ -1,4 +1,4 @@
-import-module chocolatey-au
+﻿import-module chocolatey-au
 
 # OpenProject publishes no Windows build: this package ships the source archive of each release
 # (as requested in https://github.com/chocolatey-community/chocolatey-package-requests/issues/1015).

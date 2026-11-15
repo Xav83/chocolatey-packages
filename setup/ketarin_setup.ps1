@@ -1,4 +1,4 @@
-# If you change this value, also change it in the global settings
+﻿# If you change this value, also change it in the global settings
 # The name will also be saveDir
 $saveDir = "c:\chocolatey-auto-save"
 

@@ -1,4 +1,4 @@
-import-module chocolatey-au
+﻿import-module chocolatey-au
 . "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
 
 $repository = 'BiglySoftware/BiglyBT'

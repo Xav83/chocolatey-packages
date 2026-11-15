@@ -1,4 +1,4 @@
-# PSScriptAnalyzer settings for this repository (used by .github/workflows/lint.yml).
+﻿# PSScriptAnalyzer settings for this repository (used by .github/workflows/lint.yml).
 # Run locally with:  Invoke-ScriptAnalyzer -Path . -Recurse -Settings ./PSScriptAnalyzerSettings.psd1
 @{
     Severity     = @('Error', 'Warning')
