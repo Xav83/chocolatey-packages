@@ -13,6 +13,14 @@
 BiglyBT, a feature filled, open source, ad-free, bittorrent client.
 BiglyBT is forked from the original project and is being maintained by two of the original developers as well as members of the community.
 With over 15 years of development, there's a good chance we have the features you are looking for, as well as the decade old bugs you aren't looking for.
+
+### Java runtime
+
+This package installs BiglyBT without a bundled Java runtime. BiglyBT and its installer need one, so the package depends on [Temurin21jre](https://community.chocolatey.org/packages/Temurin21jre), which is installed automatically.
+
+If a suitable Java runtime is already installed on your machine, you can skip that dependency:
+
+`choco install biglybt-no-java --ignore-dependencies`
     </description>
     <projectUrl>https://www.biglybt.com</projectUrl>
     <tags>torrent torrent-management bittorrent p2p bittorrent-client torrent-client torrent-downloader i2p</tags>
