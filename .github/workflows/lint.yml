@@ -19,7 +19,11 @@ jobs:
 
       - name: Install PSScriptAnalyzer
         shell: pwsh
-        run: Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+        run: |
+          if (-not (Get-Module -ListAvailable -Name PSScriptAnalyzer)) {
+              Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+          }
+          Get-Module -ListAvailable -Name PSScriptAnalyzer | Select-Object Name, Version
 
       - name: Analyze scripts
         shell: pwsh
