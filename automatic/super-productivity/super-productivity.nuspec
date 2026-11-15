@@ -22,7 +22,7 @@
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Changelog](https://github.com/super-productivity/super-productivity/blob/master/CHANGELOG.md)</releaseNotes>
+    <releaseNotes>[Release Notes](https://github.com/super-productivity/super-productivity/releases)</releaseNotes>
     <docsUrl>https://github.com/super-productivity/super-productivity/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/super-productivity/super-productivity/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/super-productivity/super-productivity</projectSourceUrl>

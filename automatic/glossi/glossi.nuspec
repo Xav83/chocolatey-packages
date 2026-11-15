@@ -15,7 +15,7 @@ All complete with per application bindings and working rumble emulation.
 GlosSI can, but isn't required to, launch any of your favorite games or applications and directly add them to Steam, be it Win32 or Windows Store (UWP)!
 It is the tool to enjoy any game that has trouble with Steam and/or add extra functionality to your Steam-Input needs
     </description>
-    <projectUrl>https://alia5.github.io/GlosSI/</projectUrl>
+    <projectUrl>https://github.com/Alia5/GlosSI</projectUrl>
     <tags>steam controller uwp overlay steamcontroller uwp-games dualshock dualshock4 steam-input</tags>
     <iconUrl>https://rawcdn.githack.com/Alia5/GlosSI/ee8157e38655f36c4d3ce132de68dd7e6bca9948/GloSC_Icon.ico</iconUrl>
     <copyright>Copyright 2017-2022 Peter Repukat - FlatspotSoftware</copyright>

@@ -14,7 +14,7 @@ ArrowDL is a standalone download manager for Windows, MacOS and Linux.
 
 It aims to work with latest versions of Mozilla Firefox (powered by WebExtensions), and other web browsers (Chrome, Edge, Safari...).
     </description>
-    <projectUrl>https://www.arrow-dl.com/ArrowDL/</projectUrl>
+    <projectUrl>https://www.arrow-dl.com</projectUrl>
     <tags>crawler streaming qt download youtube-dl video-downloader webextensions magnet-link torrent-client youtube-downloader torrent-downloader libtorrent mozilla-firefox download-manager stream-downloader batch-download mass-downloader picture-download web-engine nativeclient</tags>
     <iconUrl>https://rawcdn.githack.com/setvisible/DownZemAll/0bc3a5bb110869152eb0ba813577a2c5e6c7c256/src/resources/logo/icon64.png</iconUrl>
     <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
@@ -24,7 +24,7 @@ It aims to work with latest versions of Mozilla Firefox (powered by WebExtension
       <dependency id="" version="" />
     </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/setvisible/ArrowDL/releases)</releaseNotes>
-    <docsUrl>https://www.arrow-dl.com/ArrowDL/category/tutorial.html</docsUrl>
+    <docsUrl>https://github.com/setvisible/ArrowDL#readme</docsUrl>
     <bugTrackerUrl>https://github.com/setvisible/ArrowDL/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/setvisible/ArrowDL</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/arrowdl</packageSourceUrl>

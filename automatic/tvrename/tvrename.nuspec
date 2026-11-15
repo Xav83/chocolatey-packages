@@ -30,9 +30,9 @@ Grey's Anatomy - S03E04 - What I Am.avi
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Features](https://www.tvrename.com/manual/features/)</releaseNotes>
-    <docsUrl>https://www.tvrename.com/manual/user/</docsUrl>
-    <bugTrackerUrl>https://www.tvrename.com/manual/support/</bugTrackerUrl>
+    <releaseNotes>[Release Notes](https://github.com/TV-Rename/tvrename/releases)</releaseNotes>
+    <docsUrl>https://github.com/TV-Rename/tvrename#readme</docsUrl>
+    <bugTrackerUrl>https://github.com/TV-Rename/tvrename/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/TV-Rename/tvrename</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/tvrename</packageSourceUrl>
   </metadata>

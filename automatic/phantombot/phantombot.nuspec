@@ -26,7 +26,7 @@ PhantomBot has many modern features out of the box such as a built-in webpanel, 
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Release Notes](https://blog.phantom.bot/tag/release-notes/)</releaseNotes>
+    <releaseNotes>[Release Notes](https://github.com/PhantomBot/PhantomBot/releases)</releaseNotes>
     <docsUrl>https://phantombot.github.io/PhantomBot/guides/#guide=content/guides</docsUrl>
     <!--<bugTrackerUrl>https://community.phantom.bot/c/support/8</bugTrackerUrl>-->
     <projectSourceUrl>https://github.com/PhantomBot/PhantomBot</projectSourceUrl>

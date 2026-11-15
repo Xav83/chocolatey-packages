@@ -16,7 +16,7 @@ qrcp binds a web server to the address of your Wi-Fi network interface on a rand
 The default handler serves the content and exits the program when the transfer is complete.
 When used to receive files, qrcp serves an upload page and handles the transfer.
     </description>
-    <projectUrl>https://claudiodangelis.com/qrcp/</projectUrl>
+    <projectUrl>https://github.com/claudiodangelis/qrcp</projectUrl>
     <tags>golang utility qrcode</tags>
     <iconUrl>https://rawcdn.githack.com/claudiodangelis/qrcp/63dc1029bbf04688d2d3bec30a47d21b6eece43e/logo.svg</iconUrl>
     <copyright>Copyright (c) 2018 Claudio d'Angelis</copyright>
