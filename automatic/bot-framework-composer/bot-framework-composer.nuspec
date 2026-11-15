@@ -15,7 +15,7 @@ Within this tool, you'll have everything you need to build a sophisticated conve
     </description>
     <projectUrl>https://docs.microsoft.com/en-us/composer/</projectUrl>
     <tags>microsoft bots chatbots conversational-ai</tags>
-    <iconUrl>https://rawcdn.githack.com/microsoft/BotFramework-Composer/771e3182af00d68e32c3b9a6bbc939e94d6d0874/docs/Assets/gh-banner.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/microsoft/BotFramework-Composer/88ddc37e4a4008c51002e2a960d48ac4113a0ac8/Composer/packages/electron-server/resources/composerIcon_1024x1024.png</iconUrl>
     <copyright>Copyright (c) Microsoft Corporation.</copyright>
     <licenseUrl>https://github.com/microsoft/BotFramework-Composer/blob/main/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

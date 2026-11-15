@@ -15,7 +15,7 @@
     </description>
     <projectUrl>https://super-productivity.com/</projectUrl>
     <tags>macos linux productivity todo jira to-do-list electron-app time-tracker task-manager hacktoberfest timetracking hacktoberfest2021 </tags>
-    <iconUrl>https://rawcdn.githack.com/super-productivity/super-productivity/5694117f094653c7e1595b89db02eaa05ebd504a/screens/banner-bw.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/super-productivity/super-productivity/2b3f78edbf0721f0842daa097e47247fe245852f/build/appx/Square310x310Logo.scale-100.png</iconUrl>
     <copyright>Copyright (c) 2018 Johannes Millan</copyright>
     <licenseUrl>https://github.com/super-productivity/super-productivity/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
