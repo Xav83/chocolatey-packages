@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url64       = ''
-$checksum64  = ''
+$url64       = 'https://download.kde.org/stable/crow-translate/4.1.0/crow-translate-4.1.0-windows-cl-msvc2022-x86_64.exe'
+$checksum64  = '554b47f444f8ce23d51c7a46c63d2e80ef3851547290d4ae4dc19efcd9deef88'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
