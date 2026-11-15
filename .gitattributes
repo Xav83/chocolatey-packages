@@ -1,0 +1,8 @@
+# Store files exactly as committed: line endings are defined by .editorconfig and checked in CI,
+# so Git must not convert them (whatever core.autocrlf is set to on the machine).
+* -text
+
+*.png binary
+*.ico binary
+*.nupkg binary
+*.zip binary

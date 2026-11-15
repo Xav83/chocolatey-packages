@@ -1,0 +1,24 @@
+#!/bin/sh
+# Git pre-commit hook: fixes the formatting of the staged files (rules: .editorconfig).
+# Enable it once per clone:   git config core.hooksPath .githooks
+# Skip it for one commit:     git commit --no-verify
+#
+# Note: a fixed file is staged again as a whole, so with partial staging (git add -p) the
+# unstaged parts of that file would be committed too.
+
+files=$(git diff --cached --name-only --diff-filter=ACMR)
+[ -z "$files" ] && exit 0
+
+if command -v pwsh >/dev/null 2>&1; then ps=pwsh; else ps=powershell.exe; fi
+
+list="$(git rev-parse --git-dir)/format-files.txt"
+printf '%s\n' "$files" > "$list"
+fixed=$("$ps" -NoProfile -ExecutionPolicy Bypass -File ops/Format-Files.ps1 -Fix -ListFile "$list") || exit 1
+rm -f "$list"
+
+if [ -n "$fixed" ]; then
+    printf '%s\n' "$fixed" | while IFS= read -r f; do
+        [ -n "$f" ] && git add -- "$f" && echo "Formatted: $f"
+    done
+fi
+exit 0

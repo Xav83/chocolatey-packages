@@ -45,3 +45,14 @@ jobs:
 
           Write-Output "$($files.Count) scripts analyzed, $(@($results).Count) problem(s) found."
           if ($results) { exit 1 }
+
+  # Encoding, line endings, trailing whitespace and final newline, as defined in .editorconfig.
+  # Same script as the Git pre-commit hook (.githooks/pre-commit), in check mode.
+  format:
+    name: Formatting (ops/Format-Files.ps1)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check formatting
+        shell: pwsh
+        run: ./ops/Format-Files.ps1 -Check
