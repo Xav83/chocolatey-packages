@@ -55,11 +55,45 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # On the weekly run, open (or update) an issue listing the broken links.
-      - name: Report broken links in an issue
-        if: failure() && github.event_name == 'schedule'
-        uses: peter-evans/create-issue-from-file@v5
+      # On the weekly run, keep a single issue (label 'broken-links') in sync with the results:
+      # it is opened on the first failure, updated on the next ones, and closed once all URLs pass.
+      - name: Sync the broken-links issue
+        if: always() && github.event_name == 'schedule' && steps.lychee.outcome != 'skipped'
+        uses: actions/github-script@v9
+        env:
+          LINKS_OK: ${{ steps.lychee.outcome == 'success' }}
         with:
-          title: Broken URLs in package nuspecs
-          content-filepath: lychee-report.md
-          labels: broken-links
+          script: |
+            const fs = require('fs');
+            const label = 'broken-links';
+            const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            const { data: open } = await github.rest.issues.listForRepo({
+              ...context.repo, labels: label, state: 'open', per_page: 1,
+            });
+            const issue = open[0];
+
+            if (process.env.LINKS_OK === 'true') {
+              if (issue) {
+                await github.rest.issues.createComment({
+                  ...context.repo, issue_number: issue.number,
+                  body: `All URLs are valid again (${run}).`,
+                });
+                await github.rest.issues.update({
+                  ...context.repo, issue_number: issue.number, state: 'closed', state_reason: 'completed',
+                });
+              }
+              return;
+            }
+
+            // GitHub limits an issue body to 65536 characters.
+            let body = fs.existsSync('lychee-report.md') ? fs.readFileSync('lychee-report.md', 'utf8') : 'No report generated.';
+            body = `Weekly link check: ${run}\n\n${body}`.slice(0, 65000);
+
+            if (issue) {
+              await github.rest.issues.update({ ...context.repo, issue_number: issue.number, body });
+            } else {
+              await github.rest.issues.create({
+                ...context.repo, title: 'Broken URLs in package nuspecs', body, labels: [label],
+              });
+            }
