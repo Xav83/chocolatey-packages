@@ -1,0 +1,43 @@
+# Static checks of the repository's scripts. AU itself runs on AppVeyor.
+name: Lint
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  powershell:
+    name: PowerShell (PSScriptAnalyzer)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PSScriptAnalyzer
+        shell: pwsh
+        run: Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+
+      - name: Analyze scripts
+        shell: pwsh
+        run: |
+          # automatic/_output holds the template's example packages; setup/ketarin_setup.ps1 is unused.
+          $files = Get-ChildItem -Path . -Filter *.ps1 -Recurse -File |
+              Where-Object { $_.FullName -notmatch '[\\/](\.git|_output)[\\/]' -and $_.Name -ne 'ketarin_setup.ps1' }
+
+          $results = $files | ForEach-Object {
+              Invoke-ScriptAnalyzer -Path $_.FullName -Settings ./PSScriptAnalyzerSettings.psd1
+          }
+
+          foreach ($r in $results) {
+              $path = Resolve-Path -Relative $r.ScriptPath
+              $level = if ($r.Severity -eq 'Error') { 'error' } else { 'warning' }
+              # GitHub annotation: shows the problem on the line in the commit / pull request view
+              Write-Output "::${level} file=$path,line=$($r.Line),col=$($r.Column),title=$($r.RuleName)::$($r.Message)"
+          }
+
+          Write-Output "$($files.Count) scripts analyzed, $(@($results).Count) problem(s) found."
+          if ($results) { exit 1 }
