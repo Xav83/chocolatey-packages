@@ -1,6 +1,9 @@
 ﻿import-module chocolatey-au
 
-$releases = 'https://github.com/crow-translate/crow-translate/releases'
+# Crow Translate moved to KDE in 2025 (the GitHub repository is archived). Releases are published on
+# KDE's GitLab, with the binaries on download.kde.org:
+#   https://invent.kde.org/office/crow-translate/-/releases
+$releases_api = 'https://invent.kde.org/api/v4/projects/office%2Fcrow-translate/releases?per_page=10'
 
 function global:au_SearchReplace {
     @{
@@ -12,17 +15,24 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $releases = Invoke-RestMethod -Uri $releases_api -UseBasicParsing
 
-    $re  = "crow-translate-.+-win64.exe"
+    # Newest release with a plain version tag (v4.1.0) and a Windows installer on download.kde.org.
+    # Older releases linked to CI job artifacts, which expire: those are skipped.
+    foreach ($release in $releases) {
+        if ($release.upcoming_release -or $release.tag_name -notmatch '^v?\d+(\.\d+)+$') { continue }
 
-    $url = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
+        $installer = $release.assets.links | Where-Object {
+            $_.url -match '^https://download\.kde\.org/.+-windows-.+x86_64\.exe$'
+        } | Select-Object -First 1
 
-    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
-    $url64 = 'https://github.com' + $url
+        if ($installer) {
+            return @{ URL64 = $installer.url; Version = $release.tag_name -replace '^v', '' }
+        }
+    }
 
-    $Latest = @{ URL64 = $url64; Version = $version }
-    return $Latest
+    Write-Host "WARNING: No release of Crow Translate with a Windows installer on download.kde.org among the latest releases."
+    return 'ignore'
 }
 
 update -ChecksumFor 64

@@ -5,26 +5,26 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>crowtranslate</id>
     <title>Crow Translate</title>
-    <version>2.9.12</version>
+    <version>2.11.1</version>
     <authors>Shatur</authors>
     <owners>Xav83</owners>
     <summary>A simple and lightweight translator that allows you to translate and speak text using Google, Yandex Bing, LibreTranslate and Lingva. </summary>
     <description>
 Crow Translate is a simple and lightweight translator written in C++ / Qt that allows you to translate and speak text using Google, Yandex, Bing, LibreTranslate and Lingva translate API.
     </description>
-    <projectUrl>https://github.com/crow-translate/crow-translate</projectUrl>
-    <tags>windows linux google translator ocr yandex bing qt5 dbus-api libretranslate lingva</tags>
-    <iconUrl>https://rawcdn.githack.com/crow-translate/crow-translate/0de7e4671cf1b50348533ebb9cd4405900a7051f/data/icons/app/48-apps-crow-translate.png</iconUrl>
-    <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
-    <licenseUrl>https://github.com/crow-translate/crow-translate/blob/master/COPYING</licenseUrl>
+    <projectUrl>https://invent.kde.org/office/crow-translate</projectUrl>
+    <tags>windows linux google translator ocr yandex bing qt6 kde dbus-api libretranslate lingva</tags>
+    <iconUrl>https://invent.kde.org/office/crow-translate/-/raw/5c73a66261e9fe57e221f017ac04e09b406c184c/data/icons/app/sc-apps-org.kde.CrowTranslate.svg</iconUrl>
+    <copyright>Crow Translate contributors</copyright>
+    <licenseUrl>https://invent.kde.org/office/crow-translate/-/tree/master/LICENSES</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Release Notes](https://github.com/crow-translate/crow-translate/releases)</releaseNotes>
-    <docsUrl>https://github.com/crow-translate/crow-translate/blob/master/README.md</docsUrl>
-    <bugTrackerUrl>https://github.com/crow-translate/crow-translate/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/crow-translate/crow-translate</projectSourceUrl>
+    <releaseNotes>[Release Notes](https://invent.kde.org/office/crow-translate/-/releases)</releaseNotes>
+    <docsUrl>https://invent.kde.org/office/crow-translate/-/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://invent.kde.org/office/crow-translate/-/issues</bugTrackerUrl>
+    <projectSourceUrl>https://invent.kde.org/office/crow-translate</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/crowtranslate</packageSourceUrl>
   </metadata>
   <files>

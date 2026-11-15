@@ -14,4 +14,13 @@ $packageArgs = @{
 }
 Install-ChocolateyPackage @packageArgs
 
-& "$env:ChocolateyInstall\tools\shimgen.exe" --output="$env:ChocolateyInstall\bin\crow.exe" --path="$env:Programfiles\Crow Translate\crow.exe"
+# Command-line shim 'crow'. The executable is 'crow.exe' up to 2.x and 'crow-translate.exe'
+# (in a bin\ subfolder) since the move to KDE in 4.x.
+$installDir = Join-Path $env:ProgramFiles 'Crow Translate'
+$exe = Get-ChildItem -Path $installDir -Recurse -Include 'crow-translate.exe', 'crow.exe' -ErrorAction SilentlyContinue |
+  Select-Object -First 1
+if ($exe) {
+  Install-BinFile -Name 'crow' -Path $exe.FullName
+} else {
+  Write-Warning "Crow Translate executable not found in '$installDir': the 'crow' command was not created."
+}
