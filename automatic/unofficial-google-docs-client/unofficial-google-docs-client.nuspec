@@ -14,7 +14,7 @@ Google Docs is an Online Word Processor Developed by Google.
 It's design and features are very good from Free Office such as OpenOffice, LibreOffice etc.
 So we made an app for Google Docs, Sheets, Slides for Windows, macOS, and Linux.
     </description>
-    <projectUrl>https://techfiddle.io/apps/google-docs</projectUrl>
+    <projectUrl>https://github.com/Comp-Labs/Google-Docs</projectUrl>
     <tags>electron windows macos app google-drive google-sheets google-docs linux-desktop google-slides google-forms </tags>
     <iconUrl>https://rawcdn.githack.com/Comp-Labs/Google-Docs/v2022.3.10/icon.png</iconUrl>
     <copyright>MIT License</copyright>
