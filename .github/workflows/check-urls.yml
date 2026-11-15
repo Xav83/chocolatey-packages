@@ -1,0 +1,65 @@
+# Checks that the URLs in the package nuspecs (icon, project, license, docs, bug tracker, sources,
+# release notes...) are still valid. AU itself runs on AppVeyor; this workflow only checks links.
+name: Check package URLs
+
+on:
+  push:
+    branches: [develop]
+    paths: ['automatic/**/*.nuspec', '.github/workflows/check-urls.yml']
+  pull_request:
+    paths: ['automatic/**/*.nuspec', '.github/workflows/check-urls.yml']
+  schedule:
+    - cron: '21 4 * * 1'   # every Monday, 04:21 UTC: catches links that die upstream
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Strip XML comments (template leftovers, disabled iconUrl lines...) so that only the
+      # metadata Chocolatey actually uses gets checked. One copy per package keeps the
+      # package name in the report.
+      - name: Extract nuspec metadata
+        run: |
+          mkdir -p _linkcheck
+          python3 - <<'PY'
+          import glob, os, re
+          for path in glob.glob('automatic/*/*.nuspec'):
+              text = open(path, encoding='utf-8-sig').read()
+              text = re.sub(r'<!--.*?-->', '', text, flags=re.S)
+              name = os.path.basename(os.path.dirname(path))
+              open(f'_linkcheck/{name}.nuspec.txt', 'w', encoding='utf-8').write(text)
+          PY
+
+      - name: Check URLs
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-concurrency 8
+            --max-retries 3
+            --timeout 30
+            --accept '100..=103,200..=299,429'
+            --exclude 'schemas\.microsoft\.com/packaging'
+            '_linkcheck/*.nuspec.txt'
+          fail: true
+          format: markdown
+          output: lychee-report.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # On the weekly run, open (or update) an issue listing the broken links.
+      - name: Report broken links in an issue
+        if: failure() && github.event_name == 'schedule'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Broken URLs in package nuspecs
+          content-filepath: lychee-report.md
+          labels: broken-links
