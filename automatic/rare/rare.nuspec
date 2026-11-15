@@ -13,19 +13,19 @@
 A frontend for legendary, the open source Epic Games Launcher alternative.
 Rare is a graphical interface for Legendary, a command line alternative to Epic Games launcher, based on PyQt5.
     </description>
-    <projectUrl>https://github.com/Dummerle/Rare</projectUrl>
+    <projectUrl>https://github.com/RareDevs/Rare</projectUrl>
     <tags>linux games frontend pyqt5 epic-games legendary epic-games-launcher</tags>
-    <iconUrl>https://rawcdn.githack.com/Dummerle/Rare/e6fc2323f184b7f59a615038441ed84bacb57abf/rare/resources/images/Rare.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/RareDevs/Rare/e6fc2323f184b7f59a615038441ed84bacb57abf/rare/resources/images/Rare.png</iconUrl>
     <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
-    <licenseUrl>https://github.com/Dummerle/Rare/blob/main/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/RareDevs/Rare/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Release Notes](https://github.com/Dummerle/Rare/releases)</releaseNotes>
-    <docsUrl>https://github.com/Dummerle/Rare/blob/main/README.md</docsUrl>
-    <bugTrackerUrl>https://github.com/Dummerle/Rare/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/Dummerle/Rare</projectSourceUrl>
+    <releaseNotes>[Release Notes](https://github.com/RareDevs/Rare/releases)</releaseNotes>
+    <docsUrl>https://github.com/RareDevs/Rare/blob/main/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/RareDevs/Rare/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/RareDevs/Rare</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/rare</packageSourceUrl>
   </metadata>
   <files>

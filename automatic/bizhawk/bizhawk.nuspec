@@ -16,15 +16,15 @@ A multi-system emulator written in C#. As well as quality-of-life features for c
     <tags>c-sharp c-plus-plus winforms emulator emulation saturn dotnet speedrunning</tags>
     <iconUrl>https://rawcdn.githack.com/TASEmulators/BizHawk/d148601a4629c2c230e41647d7c94eee794011c7/src/BizHawk.Client.EmuHawk/images/logo.ico</iconUrl>
     <copyright>MIT License</copyright>
-    <licenseUrl>https://github.com/TASVideos/BizHawk/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/TASEmulators/BizHawk/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
     <releaseNotes>[Package Release Notes](http://tasvideos.org/Bizhawk/ReleaseHistory.html)</releaseNotes>
     <docsUrl>http://tasvideos.org/Bizhawk/FAQ.html</docsUrl>
-    <bugTrackerUrl>https://github.com/TASVideos/BizHawk/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/TASVideos/BizHawk</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/TASEmulators/BizHawk/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/TASEmulators/BizHawk</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/bizhawk</packageSourceUrl>
   </metadata>
   <files>

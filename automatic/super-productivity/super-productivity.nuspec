@@ -15,17 +15,17 @@
     </description>
     <projectUrl>https://super-productivity.com/</projectUrl>
     <tags>macos linux productivity todo jira to-do-list electron-app time-tracker task-manager hacktoberfest timetracking hacktoberfest2021 </tags>
-    <iconUrl>https://rawcdn.githack.com/johannesjo/super-productivity/5694117f094653c7e1595b89db02eaa05ebd504a/screens/banner-bw.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/super-productivity/super-productivity/5694117f094653c7e1595b89db02eaa05ebd504a/screens/banner-bw.png</iconUrl>
     <copyright>Copyright (c) 2018 Johannes Millan</copyright>
-    <licenseUrl>https://github.com/johannesjo/super-productivity/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/super-productivity/super-productivity/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
-    <releaseNotes>[Changelog](https://github.com/johannesjo/super-productivity/blob/master/CHANGELOG.md)</releaseNotes>
-    <docsUrl>https://github.com/johannesjo/super-productivity/blob/master/README.md</docsUrl>
-    <bugTrackerUrl>https://github.com/johannesjo/super-productivity/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/johannesjo/super-productivity</projectSourceUrl>
+    <releaseNotes>[Changelog](https://github.com/super-productivity/super-productivity/blob/master/CHANGELOG.md)</releaseNotes>
+    <docsUrl>https://github.com/super-productivity/super-productivity/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/super-productivity/super-productivity/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/super-productivity/super-productivity</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/super-productivity</packageSourceUrl>
   </metadata>
   <files>
