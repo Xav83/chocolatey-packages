@@ -12,7 +12,7 @@
     <description>
 Crow Translate is a simple and lightweight translator written in C++ / Qt that allows you to translate and speak text using Google, Yandex, Bing, LibreTranslate and Lingva translate API.
     </description>
-    <projectUrl>https://invent.kde.org/office/crow-translate</projectUrl>
+    <projectUrl>https://apps.kde.org/crowtranslate</projectUrl>
     <tags>windows linux google translator ocr yandex bing qt6 kde dbus-api libretranslate lingva</tags>
     <iconUrl>https://invent.kde.org/office/crow-translate/-/raw/5c73a66261e9fe57e221f017ac04e09b406c184c/data/icons/app/sc-apps-org.kde.CrowTranslate.svg</iconUrl>
     <copyright>Crow Translate contributors</copyright>
@@ -23,7 +23,7 @@ Crow Translate is a simple and lightweight translator written in C++ / Qt that a
     </dependencies>-->
     <releaseNotes>[Release Notes](https://invent.kde.org/office/crow-translate/-/releases)</releaseNotes>
     <docsUrl>https://invent.kde.org/office/crow-translate/-/blob/master/README.md</docsUrl>
-    <bugTrackerUrl>https://invent.kde.org/office/crow-translate/-/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://bugs.kde.org/buglist.cgi?product=Crow%20Translate&amp;bug_status=__open__</bugTrackerUrl>
     <projectSourceUrl>https://invent.kde.org/office/crow-translate</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/crowtranslate</packageSourceUrl>
   </metadata>
