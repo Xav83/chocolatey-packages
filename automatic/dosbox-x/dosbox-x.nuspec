@@ -16,7 +16,7 @@ Like DOSBox, it emulates a PC necessary for running many MS-DOS games and applic
     </description>
     <projectUrl>http://dosbox-x.com/</projectUrl>
     <tags>dosbox dosbox-x dos emulator</tags>
-    <!--<iconUrl>http://cdn.rawgit.com/chocolatey-coreteampackages/master/icons/chocolatey-common.extension.png</iconUrl>-->
+    <iconUrl>https://rawcdn.githack.com/joncampbell123/dosbox-x/78c022931f0ad9e567bcaaefc155fc428d9bdc7e/contrib/icons/dosbox-x.svg</iconUrl>
     <copyright> GNU General Public License, version 2</copyright>
     <licenseUrl>https://github.com/joncampbell123/dosbox-x/blob/dosbox-x-v0.83.3/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

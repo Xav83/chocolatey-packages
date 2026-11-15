@@ -14,7 +14,7 @@ A multi-system emulator written in C#. As well as quality-of-life features for c
     </description>
     <projectUrl>http://tasvideos.org/BizHawk.html</projectUrl>
     <tags>c-sharp c-plus-plus winforms emulator emulation saturn dotnet speedrunning</tags>
-    <!--<iconUrl>http://cdn.rawgit.com/chocolatey-coreteampackages/master/icons/chocolatey-common.extension.png</iconUrl>-->
+    <iconUrl>https://rawcdn.githack.com/TASEmulators/BizHawk/d148601a4629c2c230e41647d7c94eee794011c7/src/BizHawk.Client.EmuHawk/images/logo.ico</iconUrl>
     <copyright>MIT License</copyright>
     <licenseUrl>https://github.com/TASVideos/BizHawk/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

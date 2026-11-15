@@ -12,7 +12,7 @@
     <description>Windows 64bit build with some enhancements of Telegram Desktop</description>
     <projectUrl>https://github.com/TDesktop-x64/tdesktop</projectUrl>
     <tags>telegram desktop windows</tags>
-    <!--<iconUrl>https://rawcdn.githack.com/ankurk91/google-chat-electron/9a7f138f0994987775dd881ac33a5f35a72eeb93/resources/icons/normal/64.png</iconUrl>-->
+    <iconUrl>https://rawcdn.githack.com/TDesktop-x64/tdesktop/d4876ea7d66de8c9ecc7c24a476367545dcc1918/Telegram/Resources/art/icon256.png</iconUrl>
     <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
     <licenseUrl>https://github.com/TDesktop-x64/tdesktop/blob/dev/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

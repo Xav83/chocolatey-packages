@@ -14,7 +14,7 @@ bsnes-hd (called "HD Mode 7 mod, for bsnes" in early betas) is a fork of bsnes (
     </description>
     <projectUrl>https://www.romstation.fr/emulators/bsnes-hd-r39</projectUrl>
     <tags>bsnes hd snes emulator supernintendo mode7 highresolution widescreena</tags>
-    <!--<iconUrl>http://cdn.rawgit.com/chocolatey-coreteampackages/master/icons/chocolatey-common.extension.png</iconUrl>-->
+    <iconUrl>https://rawcdn.githack.com/DerKoun/bsnes-hd/fc26b25ea236f0f877f0265d2a2c37dfd93dfde9/bsnes/target-bsnes/resource/icon.png</iconUrl>
     <copyright> GNU General Public License v3.0</copyright>
     <licenseUrl>https://github.com/DerKoun/bsnes-hd/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

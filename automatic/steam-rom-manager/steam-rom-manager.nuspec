@@ -17,7 +17,7 @@ If so that's pretty weird! But now it's possible.
     </description>
     <projectUrl>https://www.steamgriddb.com</projectUrl>
     <tags>rom steam video-game games gaming</tags>
-    <!--<iconUrl>https://raw.githubusercontent.com/manga-download/hakuneko/master/res/icns/logo_128.png</iconUrl>-->
+    <iconUrl>https://rawcdn.githack.com/SteamGridDB/steam-rom-manager/a02608984941eea9361afbc4a7b1fe2a162845e8/src/assets/icons/steam-rom-manager.svg</iconUrl>
     <copyright>GNU General Public License v3.0</copyright>
     <licenseUrl>https://github.com/SteamGridDB/steam-rom-manager/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

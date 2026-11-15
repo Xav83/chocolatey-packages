@@ -16,7 +16,7 @@ This small tool can help you reduce the disk usage of WSL distros.
     </description>
     <projectUrl>https://github.com/kxxt/WSLDiskShrinker</projectUrl>
     <tags>disk-space wsl windows-subsystem-linux vhdx vhdxfiles windows-subsystem-for-linux vhdx-files</tags>
-    <!--<iconUrl>https://rawcdn.githack.com/ankurk91/google-chat-electron/9a7f138f0994987775dd881ac33a5f35a72eeb93/resources/icons/normal/64.png</iconUrl>-->
+    <iconUrl>https://rawcdn.githack.com/kxxt/WSLDiskShrinker/1f2dcbc88bb536792d4eeed29cb2bc68d804eaa4/WSLDiskShrinker/Icon.png</iconUrl>
     <copyright>Copyright (c) 2021 Believers in Science Studio</copyright>
     <licenseUrl>https://github.com/kxxt/WSLDiskShrinker/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

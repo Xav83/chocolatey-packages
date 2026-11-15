@@ -15,6 +15,7 @@ It allows for blocking individual applications access to HID and XInput devices,
     </description>
     <projectUrl>https://docs.nefarius.at/projects/HidHide/</projectUrl>
     <tags>controller game gamepad videogame emulation peripherals device input gaming</tags>
+    <iconUrl>https://rawcdn.githack.com/nefarius/HidHide/5aba4b1bfda159f87f5e37bd48f72201616bf87a/assets/hidhide-logo-dark.svg</iconUrl>
     <copyright>Copyright (c) 2020 Eric Korff de Gidts</copyright>
     <licenseUrl>https://github.com/ViGEm/HidHide/blob/master/LICENSE.rtf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

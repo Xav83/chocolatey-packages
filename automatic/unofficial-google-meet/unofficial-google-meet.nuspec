@@ -12,7 +12,7 @@
     <description>Unofficial desktop application for Google Meet built with electron.</description>
     <projectUrl>https://github.com/arjun-g/google-meet-desktop</projectUrl>
     <tags>electron google googlemeet</tags>
-    <!--<iconUrl>https://rawcdn.githack.com/ankurk91/google-chat-electron/9a7f138f0994987775dd881ac33a5f35a72eeb93/resources/icons/normal/64.png</iconUrl>-->
+    <iconUrl>https://rawcdn.githack.com/arjun-g/google-meet-desktop/060e38899d534d2b393c650ae3ff6a20c01ee049/build/icon.png</iconUrl>
     <copyright>MIT License</copyright>
     <licenseUrl>https://github.com/arjun-g/google-meet-desktop/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
