@@ -46,6 +46,16 @@ jobs:
           Write-Output "$($files.Count) scripts analyzed, $(@($results).Count) problem(s) found."
           if ($results) { exit 1 }
 
+  # Required fields, id = folder name, normalized version, packageSourceUrl, dependencies and
+  # files of every package nuspec (see ops/test_nuspecs.py).
+  nuspec:
+    name: Nuspec validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - name: Validate nuspecs
+        run: python3 ops/test_nuspecs.py
+
   # Encoding, line endings, trailing whitespace and final newline, as defined in .editorconfig.
   # Same script as the Git pre-commit hook (.githooks/pre-commit), in check mode.
   format:
