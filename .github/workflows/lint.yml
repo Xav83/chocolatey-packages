@@ -56,6 +56,22 @@ jobs:
       - name: Validate nuspecs
         run: python3 ops/test_nuspecs.py
 
+  # Python scripts (scripts/, ops/): formatting with black and linting with ruff (settings in
+  # ruff.toml), with the versions pinned in requirements.txt. Locally: make lint / make format.
+  python:
+    name: Python (black, ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # pipx (preinstalled on the runners) avoids pip's "externally managed environment" error.
+      - name: Install black and ruff
+        run: |
+          for package in $(grep -E '^(black|ruff)==' requirements.txt); do pipx install "$package"; done
+      - name: black
+        run: black --check --diff scripts ops
+      - name: ruff
+        run: ruff check --output-format github scripts ops
+
   # Encoding, line endings, trailing whitespace and final newline, as defined in .editorconfig.
   # Same script as the Git pre-commit hook (.githooks/pre-commit), in check mode.
   format:
