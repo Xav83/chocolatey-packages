@@ -46,15 +46,21 @@ jobs:
           Write-Output "$($files.Count) scripts analyzed, $(@($results).Count) problem(s) found."
           if ($results) { exit 1 }
 
-  # Required fields, id = folder name, normalized version, packageSourceUrl, dependencies and
-  # files of every package nuspec (see ops/test_nuspecs.py).
-  nuspec:
-    name: Nuspec validation
+  # Package checks:
+  # - nuspecs: required fields, id = folder name, normalized version, packageSourceUrl,
+  #   dependencies and files (ops/test_nuspecs.py)
+  # - update scripts: every au_SearchReplace pattern matches its target file
+  #   (ops/test_package_scripts.py)
+  packages:
+    name: Package checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Validate nuspecs
         run: python3 ops/test_nuspecs.py
+      - name: Check update scripts
+        if: always()
+        run: python3 ops/test_package_scripts.py
 
   # Python scripts (scripts/, ops/): formatting with black and linting with ruff (settings in
   # ruff.toml), with the versions pinned in requirements.txt. Locally: make lint / make format.
