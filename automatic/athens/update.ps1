@@ -37,4 +37,7 @@ function global:au_GetLatest {
     return $Latest
 }
 
-update -ChecksumFor 64
+# The package is frozen: don't run the update. AU uses the last line printed before 'ignore'
+# as the ignore message shown in the report.
+Write-Host "Frozen: Athens is no longer maintained (repository archived upstream)."
+'ignore'
