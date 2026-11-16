@@ -18,6 +18,7 @@ $Options = [ordered]@{
         Path = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
+            PackageSourceBranch = 'develop'               #  Markdown: branch of the update_all.ps1 link (default: master)
             NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
             UserMessage = "[History](#update-history)"       #  Markdown, Text: Custom user message to show
             NoIcons     = $false                            #  Markdown: don't show icon
