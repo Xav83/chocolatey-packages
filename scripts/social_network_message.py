@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
-
-from twitter.account import Account
-
 import argparse
 import datetime
 import os
+import sys
+
+from twitter.account import Account
 
 message_for_one_version = """The latest version ({}) of #{} {}is now available on @chocolateynuget {}
 
@@ -579,11 +578,9 @@ class Package:
     def __init__(self, name, version):
         if name not in DATABASE:
             print(
-                'Error: No configuration found for the package "{}" in the database.'.format(
-                    name
-                )
+                f'Error: No configuration found for the package "{name}" in the database.'
             )
-            exit(-1)
+            sys.exit(-1)
 
         self.name = name
 
@@ -633,12 +630,10 @@ if __name__ == "__main__":
     message = Package(args.package[0], args.version)
 
     if not os.path.isfile("twitter_ids.cookies"):
-        print(
-            """Error: File 'twitter_ids.cookies' not found.
+        print("""Error: File 'twitter_ids.cookies' not found.
             You may want to generate it with the script 'scraper_twitter_ids.py'.
-            """
-        )
-        exit(1)
+            """)
+        sys.exit(1)
 
     account = Account(cookies="twitter_ids.cookies")
     scheduled_tweets = account.scheduled_tweets()["data"]["viewer"][
