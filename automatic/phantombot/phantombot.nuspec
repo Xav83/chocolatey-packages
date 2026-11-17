@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>phantombot</id>
     <title>PhantomBot</title>
-    <version>3.4.3</version>
+    <version>3.24.3.0</version>
     <authors>BrandenB phantomindex Zackery</authors>
     <owners>Xav83</owners>
     <summary>PhantomBot is an actively developed open source interactive Twitch bot with a vibrant community that provides entertainment and moderation for your channel, allowing you to focus on what matters the most to you - your game and your viewers.</summary>
