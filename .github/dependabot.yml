@@ -10,6 +10,10 @@ updates:
     schedule:
       interval: weekly
       day: monday
+    # Wait 7 days after a release before proposing it, so that a broken or compromised
+    # release is likely to be spotted (and yanked) first.
+    cooldown:
+      default-days: 7
     # One pull request for all action updates of the week, instead of one per action.
     groups:
       github-actions:
@@ -23,6 +27,10 @@ updates:
     schedule:
       interval: weekly
       day: monday
+    # Wait 7 days after a release before proposing it, so that a broken or compromised
+    # release is likely to be spotted (and yanked) first.
+    cooldown:
+      default-days: 7
     # One pull request for the dev tools; twitter-api-client gets its own, as an update
     # could change how the tweet script talks to X.
     groups:
@@ -37,5 +45,9 @@ updates:
     schedule:
       interval: weekly
       day: monday
+    # Wait 7 days after a release before proposing it, so that a broken or compromised
+    # release is likely to be spotted (and yanked) first.
+    cooldown:
+      default-days: 7
     commit-message:
       prefix: ci

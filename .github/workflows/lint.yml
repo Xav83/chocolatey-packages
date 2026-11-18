@@ -8,7 +8,12 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: read   # to check out the repository; the jobs only read files
+
+# A newer run for the same branch or pull request replaces the one in progress.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   powershell:
@@ -16,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
 
       - name: Install PSScriptAnalyzer
         shell: pwsh
@@ -56,6 +63,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
       - name: Validate nuspecs
         run: python3 ops/test_nuspecs.py
       - name: Check update scripts
@@ -69,6 +78,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
       # pipx (preinstalled on the runners) avoids pip's "externally managed environment" error.
       - name: Install black and ruff
         run: |
@@ -85,6 +96,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
       - name: Install codespell
         run: pipx install "$(grep -E '^codespell==' requirements.txt)"
       - name: codespell
@@ -98,6 +111,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
       - name: actionlint
         run: |
           docker build --quiet --tag actionlint .github/actionlint
@@ -128,6 +143,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
       - name: Check formatting
         shell: pwsh
         run: ./ops/Format-Files.ps1 -Check

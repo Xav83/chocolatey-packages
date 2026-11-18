@@ -12,15 +12,24 @@ on:
     - cron: '21 4 * * 1'   # every Monday, 04:21 UTC: catches links that die upstream
   workflow_dispatch:
 
-permissions:
-  contents: read
-  issues: write
+# No permission by default; the job below asks for what it needs.
+permissions: {}
+
+# A newer run for the same branch or pull request replaces the one in progress.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check-urls:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read   # to check out the repository
+      issues: write    # to open, update or close the 'broken-links' issue (weekly run)
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
 
       # Strip XML comments (template leftovers, disabled iconUrl lines...) so that only the
       # metadata Chocolatey actually uses gets checked. One copy per package keeps the
@@ -53,7 +62,7 @@ jobs:
           format: markdown
           output: lychee-report.md
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}   # avoids GitHub rate limits on github.com links
 
       # On the weekly run, keep a single issue (label 'broken-links') in sync with the results:
       # it is opened on the first failure, updated on the next ones, and closed once all URLs pass.
