@@ -38,10 +38,11 @@ jobs:
         run: |
           mkdir -p _linkcheck
           python3 - <<'PY'
-          import glob, os, re
+          import glob, html, os, re
           for path in glob.glob('automatic/*/*.nuspec'):
               text = open(path, encoding='utf-8-sig').read()
               text = re.sub(r'<!--.*?-->', '', text, flags=re.S)
+              text = html.unescape(text)  # XML entities in URLs: &amp; -> &
               name = os.path.basename(os.path.dirname(path))
               open(f'_linkcheck/{name}.nuspec.txt', 'w', encoding='utf-8').write(text)
           PY
