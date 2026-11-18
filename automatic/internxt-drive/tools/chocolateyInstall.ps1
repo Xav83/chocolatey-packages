@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url64       = 'https://github.com/internxt/drive-desktop/releases/download/v2.7.2/Internxt-Setup-2.7.2.exe'
-$checksum64  = '881d577ea07b637a2e43c8f4c5956ba9553cc6099ad584b4c10eae2b3262666e'
+$url64       = 'https://github.com/internxt/drive-desktop/releases/download/v2.7.3/Internxt-Setup-2.7.3.exe'
+$checksum64  = 'e167245c0e42c130e453879a4beb73600d8b5a3ca8697321ce78fe31f91861e9'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
