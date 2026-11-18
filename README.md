@@ -66,7 +66,7 @@ The sources of the [Chocolatey](https://chocolatey.org) community packages maint
 | [vysor](https://community.chocolatey.org/packages/vysor) | Vysor | |
 | [wsldiskshrinker](https://community.chocolatey.org/packages/wsldiskshrinker) | WSL Disk Shrinker | |
 
-Frozen packages stay installable at their last version, but are no longer updated: AU skips them and shows the reason in the update report.
+Frozen packages stay installable at their last version, but are no longer updated: AU skips them and shows the reason in the update report. When adding or removing a package, update this table too: the package checks verify that it lists every package folder.
 
 ## How the updates work
 
@@ -116,7 +116,7 @@ Every push and pull request runs these checks with GitHub Actions ([`lint.yml`](
 | Check | What it checks | Run it locally |
 | --- | --- | --- |
 | PowerShell | PSScriptAnalyzer on all PowerShell scripts ([settings](PSScriptAnalyzerSettings.psd1)) | `Invoke-ScriptAnalyzer -Path . -Recurse -Settings ./PSScriptAnalyzerSettings.psd1` |
-| Package checks | Nuspec fields, ids and versions; `au_SearchReplace` patterns matching their files | `python ops/test_nuspecs.py` and `python ops/test_package_scripts.py` |
+| Package checks | Nuspec fields, ids and versions; the package table of this README; `au_SearchReplace` patterns matching their files | `python ops/test_nuspecs.py` and `python ops/test_package_scripts.py` |
 | Python | black and ruff on `scripts/` and `ops/` ([settings](ruff.toml)) | `make lint` |
 | Spelling | codespell on the whole repository ([settings](.codespellrc)) | `codespell` |
 | Workflows | actionlint on the GitHub Actions workflows | `docker build -t actionlint .github/actionlint` then `docker run --rm -v "${PWD}:/repo" -w /repo actionlint` |

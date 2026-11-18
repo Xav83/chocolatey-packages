@@ -1,7 +1,7 @@
 #!/bin/sh
 # Git pre-commit hook:
 # 1. fixes the formatting of the staged files (rules: .editorconfig, script: ops/Format-Files.ps1);
-# 2. when packages or the check scripts are staged, runs the package checks that CI runs:
+# 2. when packages, README.md or the check scripts are staged, runs the package checks that CI runs:
 #    ops/test_nuspecs.py and ops/test_package_scripts.py. The commit stops if they fail.
 #
 # Enable it once per clone:   git config core.hooksPath .githooks
@@ -31,8 +31,8 @@ if [ -n "$fixed" ]; then
 fi
 
 # --- 2. Package checks ----------------------------------------------------------------------
-# Only when a package or one of the check scripts is part of the commit.
-printf '%s\n' "$files" | grep -Eq '^(automatic/|ops/test_(nuspecs|package_scripts)\.py$)' || exit 0
+# Only when a package, README.md (its package table) or one of the check scripts is part of the commit.
+printf '%s\n' "$files" | grep -Eq '^(automatic/|README\.md$|ops/test_(nuspecs|package_scripts)\.py$)' || exit 0
 
 # Python 3: 'python3' or 'python' (Linux, macOS, most Windows setups), or the Windows launcher 'py -3'.
 # The version check also rules out the Windows Store placeholder that only prints a message.
