@@ -136,6 +136,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
 
+  # Markdown files: structure and style (settings in .markdownlint-cli2.jsonc).
+  markdown:
+    name: Markdown (markdownlint)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
+      - uses: DavidAnson/markdownlint-cli2-action@696eb3f2509270d7b882d2aa68347bc676e7af34 # v25.0.0
+        with:
+          globs: '**/*.md'
+
   # Encoding, line endings, trailing whitespace and final newline, as defined in .editorconfig.
   # Same script as the Git pre-commit hook (.githooks/pre-commit), in check mode.
   format:

@@ -1,0 +1,13 @@
+// markdownlint (Markdown linter) settings; run locally with:  npx markdownlint-cli2 "**/*.md"
+{
+  "config": {
+    // Prose is not wrapped at a fixed width in this repository: editors wrap long lines.
+    "MD013": false
+  },
+  "ignores": [
+    // Template leftovers and the upstream Apache License text
+    "automatic/_output/**",
+    "ketarin/**",
+    "LICENSE.md"
+  ]
+}
