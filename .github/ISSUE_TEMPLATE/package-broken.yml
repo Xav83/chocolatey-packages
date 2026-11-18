@@ -1,0 +1,71 @@
+name: Package not working
+description: Installing, upgrading or uninstalling a package fails, or the installed software doesn't work.
+title: "[<package>] <short description of the problem>"
+labels: ["bug"]
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package
+      description: The Chocolatey package id, as in `choco install <id>`.
+      placeholder: crowtranslate
+    validations:
+      required: true
+  - type: input
+    id: package-version
+    attributes:
+      label: Package version
+      description: Shown by `choco list <id>`, or the version you tried to install.
+      placeholder: 4.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: operation
+    attributes:
+      label: What fails?
+      options:
+        - Install
+        - Upgrade
+        - Uninstall
+        - The installed software
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command
+      description: The exact command you ran, with its options.
+      placeholder: choco install crowtranslate -y
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Chocolatey log
+      description: |
+        The output of the command, or the matching part of `C:\ProgramData\chocolatey\logs\chocolatey.log`.
+        Running the command with `--debug --verbose` gives more details.
+      render: text
+  - type: input
+    id: chocolatey
+    attributes:
+      label: Chocolatey version
+      description: Shown by `choco --version`.
+      placeholder: 2.7.5
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: For example Windows 11 24H2, Windows 10 22H2, Windows Server 2022.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I am using the latest version of the package.
+        - label: I searched the existing issues for this problem.

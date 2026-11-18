@@ -1,0 +1,46 @@
+name: Package outdated
+description: A package is not at the latest version of the software.
+title: "[<package>] Outdated: <latest version> is available"
+labels: ["outdated"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Packages are updated automatically, usually within a few hours of an upstream release.
+        A new version can also be waiting for Chocolatey's moderation: check the package's
+        "Version History" on [community.chocolatey.org](https://community.chocolatey.org/profiles/Xav83)
+        before opening an issue.
+  - type: input
+    id: package
+    attributes:
+      label: Package
+      description: The Chocolatey package id, as in `choco install <id>`.
+      placeholder: super-productivity
+    validations:
+      required: true
+  - type: input
+    id: chocolatey-version
+    attributes:
+      label: Version on Chocolatey
+      description: The latest version listed on the package's Chocolatey page.
+      placeholder: 17.1.6
+    validations:
+      required: true
+  - type: input
+    id: latest-version
+    attributes:
+      label: Latest version of the software
+      placeholder: 17.2.1
+    validations:
+      required: true
+  - type: input
+    id: release-link
+    attributes:
+      label: Link to the release
+      description: Where the new version is published (GitHub release, download page...).
+      placeholder: https://github.com/owner/project/releases/tag/v17.2.1
+  - type: textarea
+    id: details
+    attributes:
+      label: Anything else?
+      description: For example a change in the release files, a new download location, or why you need this version.

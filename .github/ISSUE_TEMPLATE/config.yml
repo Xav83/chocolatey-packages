@@ -1,0 +1,10 @@
+# Issue forms of this repository (package outdated, package not working), plus links for the
+# requests that belong elsewhere. Blank issues stay possible for anything else.
+blank_issues_enabled: true
+contact_links:
+  - name: Request a new package
+    url: https://github.com/chocolatey-community/chocolatey-package-requests/issues/new/choose
+    about: New packages are requested in the Chocolatey community's package requests repository.
+  - name: Problem with Chocolatey itself
+    url: https://docs.chocolatey.org/en-us/troubleshooting/
+    about: For questions about the choco command or the Chocolatey community repository.
