@@ -1,92 +1,141 @@
-# Chocolatey Packages
+# Chocolatey packages
 
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/Xav83/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/Xav83/chocolatey-packages)
-[![Update Status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/Xav83/c4eb33a8aa993629f3d047747322e809)
-[![chocolatey/Xav83](https://img.shields.io/badge/Chocolatey%20profile-Xav83-yellow)](https://chocolatey.org/profiles/Xav83)
+[![Lint](https://github.com/Xav83/chocolatey-packages/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/Xav83/chocolatey-packages/actions/workflows/lint.yml)
+[![Package URLs](https://github.com/Xav83/chocolatey-packages/actions/workflows/check-urls.yml/badge.svg?branch=develop)](https://github.com/Xav83/chocolatey-packages/actions/workflows/check-urls.yml)
+[![Update status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/Xav83/c4eb33a8aa993629f3d047747322e809)
+[![Chocolatey profile](https://img.shields.io/badge/Chocolatey%20profile-Xav83-yellow)](https://community.chocolatey.org/profiles/Xav83)
 
-## Chocolatey Packages Template
+The sources of the [Chocolatey](https://chocolatey.org) community packages maintained by [Xav83](https://community.chocolatey.org/profiles/Xav83). Every package is updated automatically with [Chocolatey AU](https://github.com/chocolatey-community/chocolatey-au) when a new version of the software is released.
 
-This contains Chocolatey packages, both manually and automatically maintained.
+## Packages
 
-You can choose to use one or both of the different methods currently supported in the Chocolatey community for automatic packaging. They are AU (Automatic Updater) and Ketarin/ChocolateyPackageUpdater.
+| Package | Software | Notes |
+| --- | --- | --- |
+| [2fast](https://community.chocolatey.org/packages/2fast) | 2fast | |
+| [64gram](https://community.chocolatey.org/packages/64gram) | 64Gram | |
+| [achievement-watcher](https://community.chocolatey.org/packages/achievement-watcher) | Achievement Watcher | |
+| [aemulusmodmanager](https://community.chocolatey.org/packages/aemulusmodmanager) | Aemulus Package Manager | |
+| [antidupl](https://community.chocolatey.org/packages/antidupl) | AntiDupl | |
+| [arrowdl](https://community.chocolatey.org/packages/arrowdl) | ArrowDL | |
+| [athens](https://community.chocolatey.org/packages/athens) | Athens | Frozen: no longer maintained upstream (repository archived). |
+| [biglybt-no-java](https://community.chocolatey.org/packages/biglybt-no-java) | BiglyBT | Installs BiglyBT without its bundled Java; depends on `Temurin21jre`. |
+| [bizhawk](https://community.chocolatey.org/packages/bizhawk) | BizHawk | |
+| [bot-framework-composer](https://community.chocolatey.org/packages/bot-framework-composer) | Microsoft Bot Framework Composer | |
+| [bsnes-hd](https://community.chocolatey.org/packages/bsnes-hd) | Bsnes-hd | |
+| [cairoshell](https://community.chocolatey.org/packages/cairoshell) | Cairoshell | |
+| [ccache](https://community.chocolatey.org/packages/ccache) | ccache – a fast compiler cache | |
+| [cider](https://community.chocolatey.org/packages/cider) | Cider | Frozen: Cider 1 is archived; Cider 2 is closed-source. |
+| [comictagger](https://community.chocolatey.org/packages/comictagger) | ComicTagger | |
+| [conan](https://community.chocolatey.org/packages/conan) | Conan - The open-source C/C++ package manager | |
+| [crowtranslate](https://community.chocolatey.org/packages/crowtranslate) | Crow Translate | Follows the KDE releases since version 4. |
+| [discord-history-tracker](https://community.chocolatey.org/packages/discord-history-tracker) | Discord History Tracker | |
+| [dosbox-x](https://community.chocolatey.org/packages/dosbox-x) | Dosbox-x | |
+| [doxybook2](https://community.chocolatey.org/packages/doxybook2) | doxybook2 – Doxygen XML to Markdown (or JSON) | |
+| [fanficfare](https://community.chocolatey.org/packages/fanficfare) | FanFicFare | |
+| [faust](https://community.chocolatey.org/packages/faust) | Faust - Programming Language for Audio Applications and Plugins | |
+| [flipflip](https://community.chocolatey.org/packages/flipflip) | FlipFlip | |
+| [glossi](https://community.chocolatey.org/packages/glossi) | GlosSI | Frozen: no longer maintained upstream (repository archived). |
+| [gmail-desktop](https://community.chocolatey.org/packages/gmail-desktop) | Gmail Desktop | Frozen: deprecated upstream, replaced by Meru. |
+| [hakunekonightly](https://community.chocolatey.org/packages/hakunekonightly) | HakuNeko | |
+| [hidhide](https://community.chocolatey.org/packages/hidhide) | HidHide | |
+| [hopsan](https://community.chocolatey.org/packages/hopsan) | hopsan | |
+| [internxt-drive](https://community.chocolatey.org/packages/internxt-drive) | Internxt Drive | |
+| [keepassxc-legacy](https://community.chocolatey.org/packages/keepassxc-legacy) | KeePassXC Legacy | |
+| [magpie](https://community.chocolatey.org/packages/magpie) | MAGPIE | |
+| [mgba](https://community.chocolatey.org/packages/mgba) | mGBA | |
+| [monitorian](https://community.chocolatey.org/packages/monitorian) | Monitorian | |
+| [openproject](https://community.chocolatey.org/packages/openproject) | OpenProject (source code) | Ships the source code only: OpenProject runs on Windows through Docker. |
+| [phantombot](https://community.chocolatey.org/packages/phantombot) | PhantomBot | |
+| [pluginval](https://community.chocolatey.org/packages/pluginval) | pluginval - Cross platform plugin testing and validation tool | |
+| [qrcp](https://community.chocolatey.org/packages/qrcp) | qrcp | |
+| [rare](https://community.chocolatey.org/packages/rare) | Rare | |
+| [sharik](https://community.chocolatey.org/packages/sharik) | Sharik | |
+| [steam-rom-manager](https://community.chocolatey.org/packages/steam-rom-manager) | Steam ROM Manager | |
+| [super-productivity](https://community.chocolatey.org/packages/super-productivity) | Super Productivity | |
+| [superf4](https://community.chocolatey.org/packages/superf4) | SuperF4 | |
+| [switchhosts](https://community.chocolatey.org/packages/switchhosts) | SwitchHosts | |
+| [tachidesk-jui](https://community.chocolatey.org/packages/tachidesk-jui) | Suwayomi-JUI (formerly Tachidesk-JUI) | |
+| [tachidesk](https://community.chocolatey.org/packages/tachidesk) | Tachidesk-JUI | Frozen: replaced by `tachidesk-jui`. |
+| [taskboard](https://community.chocolatey.org/packages/taskboard) | TaskBoard | |
+| [tvrename](https://community.chocolatey.org/packages/tvrename) | TV Rename | |
+| [twemoji](https://community.chocolatey.org/packages/twemoji) | Twitter Color Emoji SVGinOT Font | |
+| [unofficial-Google-Chat-Electron](https://community.chocolatey.org/packages/unofficial-Google-Chat-Electron) | Unofficial Desktop app for Google Chat | |
+| [unofficial-google-docs-client](https://community.chocolatey.org/packages/unofficial-google-docs-client) | Google Docs (Unofficial) | |
+| [unofficial-google-meet](https://community.chocolatey.org/packages/unofficial-google-meet) | Google Meet Desktop (Unofficial) | |
+| [vysor](https://community.chocolatey.org/packages/vysor) | Vysor | |
+| [wsldiskshrinker](https://community.chocolatey.org/packages/wsldiskshrinker) | WSL Disk Shrinker | |
 
-### Folder Structure
+Frozen packages stay installable at their last version, but are no longer updated: AU skips them and shows the reason in the update report.
 
-* automatic - where automatic packaging and packages are kept. These are packages that are automatically maintained using either [AU](https://chocolatey.org/packages/au) or [Ketarin](https://chocolatey.org/packages/ketarin)/[ChocolateyPackageUpdater](https://chocolatey.org/packages/chocolateypackageupdater) combo.
-* icons - Where you keep icon files for the packages. This is done to reduce issues when packages themselves move around.
-* ketarin - where ketarin jobs (aka applications or searches) exported as XML are kept. This is done to allow ease of contribution.
-* manual - where packages that are not automatic are kept.
-* ops - scripts, jobs, and other items for ensuring automatic packaging.
-* setup - items for prepping the system to ensure for auto packaging.
+## How the updates work
 
-For setting up your own automatic package repository, please see [Automatic Packaging](https://chocolatey.org/docs/automatic-packages)
+1. [AppVeyor](https://ci.appveyor.com/project/Xav83/chocolatey-packages) runs [`update_all.ps1`](update_all.ps1) on a schedule and on every push to `develop`.
+2. For each package in [`automatic/`](automatic), AU runs its `update.ps1`: `au_GetLatest` finds the latest version of the software, and `au_SearchReplace` updates the package files (URL, checksum, version).
+3. Packages with a new version are pushed to the Chocolatey community repository, where they go through [moderation](https://docs.chocolatey.org/en-us/community-repository/moderation/) before being published.
+4. AU commits the updated packages back to `develop` and publishes a report in the [update status gist](https://gist.github.com/Xav83/c4eb33a8aa993629f3d047747322e809).
 
-### Requirements
+### Forcing an update
 
-* Chocolatey (choco.exe)
+The commit message of a push to `develop` can force an update:
 
-#### Ketarin / ChocolateyPackageUpdater
+| In the commit message | Effect |
+| --- | --- |
+| `[AU <package>]` | Updates and pushes the package even if its version did not change. When the version is the same as the latest one, AU adds a date to it (e.g. `1.2.3.20261119`): use it to publish a fix of the package itself. |
+| `[AU <package>:<version>]` | Same, with an explicit version. |
+| `[PUSH <package>]` | Builds and pushes the package as it is in the repository, without running AU. |
 
-* PowerShell v2+
-* [Ketarin](https://chocolatey.org/packages/ketarin)
-* [Chocolatey Package Updater](https://chocolatey.org/packages/chocolateypackageupdater)
-* A Windows box somewhere - to run the updater on - appveyor can't work until the import of the settings can be automated
+## Working on a package
 
-#### AU
+Each package folder in [`automatic/`](automatic) contains the nuspec, the install scripts in `tools/`, and the AU script `update.ps1` (see [`automatic/README.md`](automatic/README.md)). Packages hosted on GitHub should use the shared helper [`ops/Get-GitHubReleaseAsset.ps1`](ops/README.md), which skips pre-releases and placeholder tags and verifies downloads with GitHub's checksums.
 
-* PowerShell v5+.
-* The [AU module](https://chocolatey.org/packages/au).
+To test a package locally, from its folder, in an administrator PowerShell:
 
-For daily operations check out the AU packages [template README](https://github.com/chocolatey-community/chocolatey-au-packages-template/blob/master/README.md).
+```powershell
+$au_Force = $true; $au_Push = $false; .\update.ps1   # build the package without pushing it
+choco install <package> -s . -y                    # install it from the local folder
+choco uninstall <package> -y
+```
 
-### Getting started
+Then undo the changes made by the build (version, URL and checksum) before committing.
 
-1. Fork this repository and rename it to `chocolatey-packages` (on GitHub - go into Settings, Repository name and rename).
-1. Clone the repository locally.
-1. Head into the `setup` folder and perform the proper steps for your choice of setup (or both if you plan to use both methods).
-1. Edit this README. Update the badges at the top.
+### Local setup
 
-### Recommendation on Auto Packaging
+```powershell
+choco install chocolatey-au                # AU, as on AppVeyor
+git config core.hooksPath .githooks         # enable the pre-commit hook (once per clone)
+pip install -r requirements.txt             # black, ruff, codespell and zizmor, with the CI versions
+```
 
-AU provides more in the process of being completely automated, sending emails when things go wrong, and providing a nice report at the end. It doesn't have a bolt-on feeling to it that you see with Ketarin / ChocolateyPackageUdater, however the one thing it does lack in comparison is no visual feedback to seeing how searches for installers may be found. Other than that, it provides errors when things go wrong, where Ketarin doesn't consider anything that happens during "before run"/"post run updates" (where chocopkgup and checksumming occur) to be an error, even if those scripts error.
+The [pre-commit hook](.githooks/pre-commit) fixes the formatting of the committed files and, when packages are committed, runs the package checks. Use `git commit --no-verify` to skip it.
 
-So for best visibility, enjoying the ease of using AppVeyor, and for a nice report of results, we recommend AU over Ketarin. You also don't need to deal with templates as AU works directly with the xml/ps1 files to do replacement.
+## Checks
 
-### Adapting your current source repository to this source repository template
+Every push and pull request runs these checks with GitHub Actions ([`lint.yml`](.github/workflows/lint.yml)):
 
-You want to bring in all of your packages into the proper folders. We suggest using some sort of diffing tool to look at the differences between your current solution and this solution and then making adjustments to it. Pay special attention to the setup folder.
+| Check | What it checks | Run it locally |
+| --- | --- | --- |
+| PowerShell | PSScriptAnalyzer on all PowerShell scripts ([settings](PSScriptAnalyzerSettings.psd1)) | `Invoke-ScriptAnalyzer -Path . -Recurse -Settings ./PSScriptAnalyzerSettings.psd1` |
+| Package checks | Nuspec fields, ids and versions; `au_SearchReplace` patterns matching their files | `python ops/test_nuspecs.py` and `python ops/test_package_scripts.py` |
+| Python | black and ruff on `scripts/` and `ops/` ([settings](ruff.toml)) | `make lint` |
+| Spelling | codespell on the whole repository ([settings](.codespellrc)) | `codespell` |
+| Workflows | actionlint on the GitHub Actions workflows | `docker build -t actionlint .github/actionlint` then `docker run --rm -v "${PWD}:/repo" -w /repo actionlint` |
+| Workflow security | zizmor on the workflows and the Dependabot configuration | `zizmor .` |
+| Markdown | markdownlint on the Markdown files ([settings](.markdownlint-cli2.jsonc)) | `npx markdownlint-cli2 "**/*.md"` |
+| Formatting | Encoding, line endings and whitespace from [`.editorconfig`](.editorconfig) | `.\ops\Format-Files.ps1 -Check` (`-Fix` to correct) |
 
-1. Bring over the following files to your package source repository:
+The [package URL check](.github/workflows/check-urls.yml) verifies every link of the nuspecs (icon, project, license, docs...) when a nuspec changes, and every week. When links break, it opens an issue labelled `broken-links`, and closes it once they work again.
 
-   * `automatic\README.md`
-   * `icons\README.md`
-   * `ketarin\README.md`
-   * `ketarin\_KetarinChocolateyTemplate.xml`
-   * `manual\README.md`
-   * `ops\*.*`
-   * `setup\*.*`
-   * `.appveyor.yml`
+## Dependencies
 
-1. Inspect the following file and add the differences:
+[Dependabot](.github/dependabot.yml) keeps the GitHub Actions, the Python tools of [`requirements.txt`](requirements.txt) and the actionlint image up to date, with a 7-day cooldown after each release. Minor and patch updates are merged automatically once all the checks pass; major updates and `twitter-api-client` updates are reviewed by hand. The `develop` branch requires the checks to pass before a pull request is merged.
 
-   * `.gitignore`
+## Issues and contributions
 
-### Use Both Methodologies
+To report an outdated or broken package, use the [issue forms](https://github.com/Xav83/chocolatey-packages/issues/new/choose). New packages are requested in the [Chocolatey package requests](https://github.com/chocolatey-community/chocolatey-package-requests) repository.
 
-The way this source repository is designed, you can use both AU and Ketarin/ChocolateyPackageUpdater together. This is especially helpful when migrating existing packages from one methodology to the other.
+Pull requests are welcome: please keep the checks green.
 
-### Migrating existing Ketarin packages to AU
+## License
 
-1. Add an update.ps1 to the package folder and determine how to update the package using [AU's instructions](https://github.com/chocolatey-community/chocolatey-au#creating-the-package-updater-script).
-1. Remove the ketarin.xml file from the ketarin folder.
-1. Ensure you also remove the package job from Ketarin itself as it doesn't automatically remove.
-
-### Special Notes
-
-#### Ketarin
-
-* In `Settings -> Global variables` the variable `autoPackagesFolder` is used to determine where your automatic packages are. It doesn't matter what `chocopkgup` is using, this folder is passed through. Ensure this is set appropriately.
-* In `Settings -> Global variables` the variable `saveDir` is used to determine where to save the downloaded files from Ketarin. Please ensure the folder exists.
-* In `Settings -> Global variables` the variable `nopush` is set to `--nopush`, which allows checksum calculations to occur and then a custom script will push the files.
-* In `Settings -> Global variables` the variable `cscript` is set to `2`, which means calculate checksums, rebuild, and push the packages. If you set this to `1` it will do everything except push the packages. Setting this to `1` is how you disable package pushing.
-* In `Settings -> Global variables` the variable `checksum` is set to `{checksum}`. Do not change this, this is how the post update script replaces the literal value `{checksum}`. The same goes for `checksumx64`, `packageGuid`, and `url64`.
+[Apache License 2.0](LICENSE.md)
