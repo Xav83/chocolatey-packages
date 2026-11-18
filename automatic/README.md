@@ -11,7 +11,7 @@ The following packages implement this strategy of auto updates:
 * 1password
 * git.install
 
-There is also an _output folder where the automatic packaging files with tokens to do token replacment and output package files with actual values in this folder. This folder is necessary for chocopkgup to do its work. You can decide whether to commit this set of folders or not. We recommend committing it as it makes it easier to do one off fixes and contributors to submit fixes for a package.
+There is also an _output folder where the automatic packaging files with tokens to do token replacement and output package files with actual values in this folder. This folder is necessary for chocopkgup to do its work. You can decide whether to commit this set of folders or not. We recommend committing it as it makes it easier to do one off fixes and contributors to submit fixes for a package.
 
 ### Automatic Updater (AU)
 

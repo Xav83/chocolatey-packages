@@ -2,7 +2,7 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The application has been dowloaded from the official distribution and can be verified by:
+The application has been downloaded from the official distribution and can be verified by:
 
 1.  Go ta the binary distribution page: https://github.com/JimmXinu/FanFicFare/releases/tag/v4.30.0
     , and download the archive "FanFicFarePlugin-v4.30.0.zip" using the relevant links in the asset section of the distribution page.
