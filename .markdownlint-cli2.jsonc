@@ -5,9 +5,7 @@
     "MD013": false
   },
   "ignores": [
-    // Template leftovers and the upstream Apache License text
-    "automatic/_output/**",
-    "ketarin/**",
+    // The upstream Apache License text
     "LICENSE.md"
   ]
 }

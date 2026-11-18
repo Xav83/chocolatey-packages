@@ -51,8 +51,6 @@ def local(tag):
 
 for path in sorted(glob.glob("automatic/*/*.nuspec")):
     folder = os.path.basename(os.path.dirname(path))
-    if folder.startswith("_"):
-        continue  # automatic/_output: template examples
 
     try:
         root = ET.parse(path).getroot()

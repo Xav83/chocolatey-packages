@@ -9,7 +9,7 @@
     - no trailing whitespace (except in Markdown, where two spaces mean a line break)
     - exactly one newline at the end of the file
 
-    Template leftovers and upstream legal texts (automatic/*/tools/*.txt) are skipped, and so are
+    Upstream legal texts shipped in packages (automatic/*/tools/*.txt) are skipped, and so are
     binary files. Used by the Git pre-commit hook (.githooks/pre-commit, -Fix) and by CI (-Check).
 
 .EXAMPLE
@@ -41,7 +41,7 @@ Set-Location $root
 if ($ListFile) { $Path = Get-Content -LiteralPath $ListFile -Encoding UTF8 | Where-Object { $_ } }
 if (!$Path)    { $Path = & git ls-files }
 
-$skip     = '^(automatic/_output/|ketarin/|setup/KetarinSettings\.xml$|automatic/.*/tools/.*\.txt$)'
+$skip     = '^automatic/.*/tools/.*\.txt$'
 $utf8     = New-Object System.Text.UTF8Encoding $false
 $bom      = [byte[]] (0xEF, 0xBB, 0xBF)
 $problems = @()

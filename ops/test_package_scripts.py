@@ -39,8 +39,6 @@ STRING = r"(\"(?:[^\"`]|`.)*\"|'(?:[^']|'')*')"
 
 for update in sorted(glob.glob("automatic/*/update.ps1")):
     package = os.path.dirname(update)
-    if os.path.basename(package).startswith("_"):
-        continue  # automatic/_output: template examples
     text = open(update, encoding="utf-8-sig").read()
 
     block = re.search(r"function\s+global:au_SearchReplace\s*\{(.*?)\n\}", text, re.S)

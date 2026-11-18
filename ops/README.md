@@ -1,16 +1,17 @@
 # Operations
 
-## Ketarin/ChocolateyPackageUpdater Ops
+Scripts used by the packages, by CI and by the Git pre-commit hook.
 
-* Use ketarinupdate.cmd or another file to set up a scheduled task for daily, hourly, or whatever schedule you best feel will work appropriately.
+| Script | Used by | What it does |
+| --- | --- | --- |
+| `Get-GitHubReleaseAsset.ps1` | `automatic/*/update.ps1` | Shared helper to find the latest GitHub release of a package (see below). |
+| `Format-Files.ps1` | pre-commit hook, `lint.yml` | Applies (`-Fix`) or checks (`-Check`) the `.editorconfig` rules: encoding, line endings, trailing whitespace, final newline. |
+| `test_nuspecs.py` | pre-commit hook, `lint.yml` | Validates the nuspecs: required fields, id = folder name, normalized version, `packageSourceUrl`, dependencies, files. |
+| `test_package_scripts.py` | pre-commit hook, `lint.yml` | Checks that every `au_SearchReplace` pattern of `update.ps1` matches its target file. |
 
-## AutomaticUpdater
+## Shared helper for AU update scripts
 
-Nothing to do here, jobs run automatically by AppVeyor on commit and on a schedule that you've set up in AppVeyor.
-
-## Shared helpers for AU update scripts
-
-* `Get-GitHubReleaseAsset.ps1` - finds the newest GitHub release with a real version tag (skipping placeholders such as `v4.x.x`, nightlies and release candidates) that ships an asset matching a pattern. Usage from `automatic/<package>/update.ps1`:
+`Get-GitHubReleaseAsset.ps1` finds the newest GitHub release with a real version tag (skipping placeholders such as `v4.x.x`, nightlies and release candidates) that ships an asset matching a pattern. Usage from `automatic/<package>/update.ps1`:
 
 ```powershell
 . "$PSScriptRoot\..\..\ops\Get-GitHubReleaseAsset.ps1"
@@ -24,4 +25,4 @@ function global:au_GetLatest {
 }
 ```
 
-`Set-ReleaseChecksum` copies the SHA256 digest GitHub shows for the asset into `$Latest`, so AU skips downloading the installer just to compute its checksum ("Automatic checksum skipped" in the log). Assets without a digest are downloaded and checksummed by AU as before.
+`Set-ReleaseChecksum` copies the SHA256 digest GitHub shows for the asset into `$Latest`, so AU can verify the download against it. Assets without a digest are downloaded and checksummed by AU as before.
