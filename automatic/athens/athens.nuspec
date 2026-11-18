@@ -13,7 +13,7 @@
 Athens helps startups and product teams connect notes, tasks, and insights in a single workspace.
 Athens does this through a graph database that enables bottom-up structure and rapid experimentation of processes and workflows.
     </description>
-    <projectUrl>https://www.athensresearch.org/</projectUrl>
+    <projectUrl>https://github.com/athensresearch/athens</projectUrl>
     <tags>knowledge-graph knowledge-base memex knowledge-management notetaking tools-for-thought </tags>
     <iconUrl>https://rawcdn.githack.com/athensresearch/athens/962c46434e841fad4216cbc4c37e313ea5c856ba/resources/public/favicon.png</iconUrl>
     <copyright>Eclipse Public License - v 1.0</copyright>
