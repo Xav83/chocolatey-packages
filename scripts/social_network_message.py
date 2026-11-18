@@ -663,6 +663,8 @@ if __name__ == "__main__":
         message.to_string(), new_tweet_date.strftime("%Y-%m-%d %H:%M")
     )
     if "errors" in scheduling_result:
-        print(f"There has been an issue when scheduling the tweet:\n{scheduling_result}")
+        print(
+            f"There has been an issue when scheduling the tweet:\n{scheduling_result}"
+        )
     else:
         print(f"Tweet scheduled on {new_tweet_date.strftime('%Y-%m-%d %H:%M')}")
