@@ -90,6 +90,19 @@ jobs:
       - name: codespell
         run: codespell
 
+  # GitHub Actions workflows: syntax, expressions, step outputs, and the shell scripts in 'run:'
+  # steps (through shellcheck). Uses the official actionlint Docker image; its version is pinned
+  # in .github/actionlint/Dockerfile and kept up to date by Dependabot.
+  workflows:
+    name: Workflows (actionlint)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: actionlint
+        run: |
+          docker build --quiet --tag actionlint .github/actionlint
+          docker run --rm --volume "$PWD:/repo" --workdir /repo actionlint -color
+
   # Encoding, line endings, trailing whitespace and final newline, as defined in .editorconfig.
   # Same script as the Git pre-commit hook (.githooks/pre-commit), in check mode.
   format:

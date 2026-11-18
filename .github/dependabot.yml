@@ -1,6 +1,7 @@
 # Keeps dependencies up to date: Dependabot opens a pull request when a new version is released
 # - the actions used in .github/workflows (e.g. actions/checkout v4 -> v5)
 # - the Python packages pinned in requirements.txt (black, ruff, codespell, twitter-api-client)
+# - the actionlint Docker image pinned in .github/actionlint/Dockerfile
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -29,3 +30,12 @@ updates:
         patterns: ['black', 'ruff', 'codespell']
     commit-message:
       prefix: deps
+
+  - package-ecosystem: docker
+    directory: /.github/actionlint
+    target-branch: develop
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: ci
