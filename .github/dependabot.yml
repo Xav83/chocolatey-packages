@@ -1,6 +1,6 @@
 # Keeps dependencies up to date: Dependabot opens a pull request when a new version is released
 # - the actions used in .github/workflows (e.g. actions/checkout v4 -> v5)
-# - the Python packages pinned in requirements.txt (black, ruff, twitter-api-client)
+# - the Python packages pinned in requirements.txt (black, ruff, codespell, twitter-api-client)
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -22,10 +22,10 @@ updates:
     schedule:
       interval: weekly
       day: monday
-    # One pull request for black and ruff; twitter-api-client gets its own, as an update
+    # One pull request for the dev tools; twitter-api-client gets its own, as an update
     # could change how the tweet script talks to X.
     groups:
       python-tools:
-        patterns: ['black', 'ruff']
+        patterns: ['black', 'ruff', 'codespell']
     commit-message:
       prefix: deps

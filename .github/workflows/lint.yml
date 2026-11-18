@@ -78,6 +78,18 @@ jobs:
       - name: ruff
         run: ruff check --output-format github scripts ops
 
+  # Common misspellings in the whole repository (settings in .codespellrc), with the version
+  # pinned in requirements.txt. Locally: codespell
+  spelling:
+    name: Spelling (codespell)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install codespell
+        run: pipx install "$(grep -E '^codespell==' requirements.txt)"
+      - name: codespell
+        run: codespell
+
   # Encoding, line endings, trailing whitespace and final newline, as defined in .editorconfig.
   # Same script as the Git pre-commit hook (.githooks/pre-commit), in check mode.
   format:

@@ -5,7 +5,8 @@ format:
 	black scripts ops
 	ruff check --fix scripts ops
 
-# Check the Python scripts without changing them (same checks as CI).
+# Check the Python scripts and the spelling of the whole repository (same checks as CI).
 lint:
 	black --check scripts ops
 	ruff check scripts ops
+	codespell

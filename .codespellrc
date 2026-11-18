@@ -1,0 +1,8 @@
+# codespell (spell checker for code) settings; run locally with:  codespell
+[codespell]
+# Template leftovers, binary files and Git internals
+skip = ./.git,./automatic/_output,./ketarin,./setup/KetarinSettings.xml,*.png,*.ico,*.svg,*.zip,*.nupkg
+# Also check hidden files and folders (.github, .editorconfig...)
+check-hidden = true
+# Words that are correct here: 'gameboy' is used in package tags and hashtags
+ignore-words-list = gameboy
