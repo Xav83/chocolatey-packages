@@ -1,14 +1,22 @@
 #!/bin/sh
-# Git pre-commit hook: fixes the formatting of the staged files (rules: .editorconfig).
+# Git pre-commit hook:
+# 1. fixes the formatting of the staged files (rules: .editorconfig, script: ops/Format-Files.ps1);
+# 2. when packages or the check scripts are staged, runs the package checks that CI runs:
+#    ops/test_nuspecs.py and ops/test_package_scripts.py. The commit stops if they fail.
+#
 # Enable it once per clone:   git config core.hooksPath .githooks
 # Skip it for one commit:     git commit --no-verify
 #
-# Note: a fixed file is staged again as a whole, so with partial staging (git add -p) the
-# unstaged parts of that file would be committed too.
+# Notes:
+# - a fixed file is staged again as a whole, so with partial staging (git add -p) the unstaged
+#   parts of that file would be committed too;
+# - the package checks read the files on disk (not only the staged versions) and need Python 3;
+#   without Python they are skipped with a warning, and CI still runs them.
 
 files=$(git diff --cached --name-only --diff-filter=ACMR)
 [ -z "$files" ] && exit 0
 
+# --- 1. Formatting --------------------------------------------------------------------------
 if command -v pwsh >/dev/null 2>&1; then ps=pwsh; else ps=powershell.exe; fi
 
 list="$(git rev-parse --git-dir)/format-files.txt"
@@ -21,4 +29,30 @@ if [ -n "$fixed" ]; then
         [ -n "$f" ] && git add -- "$f" && echo "Formatted: $f"
     done
 fi
-exit 0
+
+# --- 2. Package checks ----------------------------------------------------------------------
+# Only when a package or one of the check scripts is part of the commit.
+printf '%s\n' "$files" | grep -Eq '^(automatic/|ops/test_(nuspecs|package_scripts)\.py$)' || exit 0
+
+# Python 3: 'python3' or 'python' (Linux, macOS, most Windows setups), or the Windows launcher 'py -3'.
+# The version check also rules out the Windows Store placeholder that only prints a message.
+python=''
+for candidate in python3 python 'py -3'; do
+    if $candidate -c 'import sys; sys.exit(sys.version_info < (3, 8))' >/dev/null 2>&1; then
+        python=$candidate
+        break
+    fi
+done
+if [ -z "$python" ]; then
+    echo 'Warning: Python 3 not found, package checks skipped (CI will run them).' >&2
+    exit 0
+fi
+
+status=0
+for check in ops/test_nuspecs.py ops/test_package_scripts.py; do
+    $python "$check" || status=1
+done
+if [ "$status" -ne 0 ]; then
+    echo 'Commit stopped: fix the problems above, or commit with --no-verify to skip the checks.' >&2
+fi
+exit "$status"
