@@ -1,14 +1,14 @@
-## Operations
+# Operations
 
-### Ketarin/ChocolateyPackageUpdater Ops
+## Ketarin/ChocolateyPackageUpdater Ops
 
 * Use ketarinupdate.cmd or another file to set up a scheduled task for daily, hourly, or whatever schedule you best feel will work appropriately.
 
-### AutomaticUpdater
+## AutomaticUpdater
 
 Nothing to do here, jobs run automatically by AppVeyor on commit and on a schedule that you've set up in AppVeyor.
 
-### Shared helpers for AU update scripts
+## Shared helpers for AU update scripts
 
 * `Get-GitHubReleaseAsset.ps1` - finds the newest GitHub release with a real version tag (skipping placeholders such as `v4.x.x`, nightlies and release candidates) that ships an asset matching a pattern. Usage from `automatic/<package>/update.ps1`:
 

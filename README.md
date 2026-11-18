@@ -1,6 +1,6 @@
 # Chocolatey Packages
 
-[![](https://ci.appveyor.com/api/projects/status/github/Xav83/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/Xav83/chocolatey-packages)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/Xav83/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/Xav83/chocolatey-packages)
 [![Update Status](https://img.shields.io/badge/Update-Status-blue.svg)](https://gist.github.com/Xav83/c4eb33a8aa993629f3d047747322e809)
 [![chocolatey/Xav83](https://img.shields.io/badge/Chocolatey%20profile-Xav83-yellow)](https://chocolatey.org/profiles/Xav83)
 
@@ -46,7 +46,6 @@ For daily operations check out the AU packages [template README](https://github.
 1. Head into the `setup` folder and perform the proper steps for your choice of setup (or both if you plan to use both methods).
 1. Edit this README. Update the badges at the top.
 
-
 ### Recommendation on Auto Packaging
 
 AU provides more in the process of being completely automated, sending emails when things go wrong, and providing a nice report at the end. It doesn't have a bolt-on feeling to it that you see with Ketarin / ChocolateyPackageUdater, however the one thing it does lack in comparison is no visual feedback to seeing how searches for installers may be found. Other than that, it provides errors when things go wrong, where Ketarin doesn't consider anything that happens during "before run"/"post run updates" (where chocopkgup and checksumming occur) to be an error, even if those scripts error.
@@ -58,16 +57,19 @@ So for best visibility, enjoying the ease of using AppVeyor, and for a nice repo
 You want to bring in all of your packages into the proper folders. We suggest using some sort of diffing tool to look at the differences between your current solution and this solution and then making adjustments to it. Pay special attention to the setup folder.
 
 1. Bring over the following files to your package source repository:
- * `automatic\README.md`
- * `icons\README.md`
- * `ketarin\README.md`
- * `ketarin\_KetarinChocolateyTemplate.xml`
- * `manual\README.md`
- * `ops\*.*`
- * `setup\*.*`
- * `.appveyor.yml`
+
+   * `automatic\README.md`
+   * `icons\README.md`
+   * `ketarin\README.md`
+   * `ketarin\_KetarinChocolateyTemplate.xml`
+   * `manual\README.md`
+   * `ops\*.*`
+   * `setup\*.*`
+   * `.appveyor.yml`
+
 1. Inspect the following file and add the differences:
- * `.gitignore`
+
+   * `.gitignore`
 
 ### Use Both Methodologies
 
