@@ -103,6 +103,24 @@ jobs:
           docker build --quiet --tag actionlint .github/actionlint
           docker run --rm --volume "$PWD:/repo" --workdir /repo actionlint -color
 
+  # Security audit of the GitHub Actions workflows and of the Dependabot configuration
+  # (unpinned actions, excessive permissions, credential leaks, template injection...), with the
+  # version pinned in requirements.txt. The token enables the online audits (e.g. known
+  # vulnerable actions, impostor commits). Locally: zizmor .
+  security:
+    name: Workflow security (zizmor)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false   # nothing is pushed: no Git credential on disk
+      - name: Install zizmor
+        run: pipx install "$(grep -E '^zizmor==' requirements.txt)"
+      - name: zizmor
+        run: zizmor --format github .
+        env:
+          GH_TOKEN: ${{ github.token }}
+
   # Encoding, line endings, trailing whitespace and final newline, as defined in .editorconfig.
   # Same script as the Git pre-commit hook (.githooks/pre-commit), in check mode.
   format:

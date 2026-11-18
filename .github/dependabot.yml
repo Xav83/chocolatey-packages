@@ -1,6 +1,6 @@
 # Keeps dependencies up to date: Dependabot opens a pull request when a new version is released
 # - the actions used in .github/workflows (e.g. actions/checkout v4 -> v5)
-# - the Python packages pinned in requirements.txt (black, ruff, codespell, twitter-api-client)
+# - the Python packages pinned in requirements.txt (black, ruff, codespell, zizmor, twitter-api-client)
 # - the actionlint Docker image pinned in .github/actionlint/Dockerfile
 version: 2
 updates:
@@ -27,7 +27,7 @@ updates:
     # could change how the tweet script talks to X.
     groups:
       python-tools:
-        patterns: ['black', 'ruff', 'codespell']
+        patterns: ['black', 'ruff', 'codespell', 'zizmor']
     commit-message:
       prefix: deps
 
