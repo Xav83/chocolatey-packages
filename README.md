@@ -134,6 +134,8 @@ The [package URL check](.github/workflows/check-urls.yml) verifies every link of
 
 To report an outdated or broken package, use the [issue forms](https://github.com/Xav83/chocolatey-packages/issues/new/choose). New packages are requested in the [Chocolatey package requests](https://github.com/chocolatey-community/chocolatey-package-requests) repository.
 
+To report a security problem in a package, see the [security policy](SECURITY.md).
+
 Pull requests are welcome: please keep the checks green.
 
 ## License
