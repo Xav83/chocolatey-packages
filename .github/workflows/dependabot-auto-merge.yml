@@ -1,0 +1,42 @@
+# Enables auto-merge on Dependabot's pull requests for minor and patch updates: GitHub then
+# merges them by itself once all the required checks have passed. Major updates (e.g.
+# actions/checkout v4 -> v7) and twitter-api-client updates are left for a manual review.
+#
+# Requires, in the repository settings:
+# - General > Pull Requests > "Allow auto-merge";
+# - a branch protection rule or ruleset on 'develop' that requires the CI checks to pass.
+#   Without required checks, auto-merge would merge the pull request immediately.
+name: Dependabot auto-merge
+
+on: pull_request
+
+# No permission by default; the job below asks for what it needs.
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    # Only pull requests opened by Dependabot in this repository (not in forks). The author of
+    # the pull request can't be spoofed, unlike github.actor.
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'Xav83/chocolatey-packages'
+    permissions:
+      contents: write        # to merge the pull request
+      pull-requests: write   # to enable auto-merge on it
+    steps:
+      - name: Read the Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
+
+      - name: Enable auto-merge (minor and patch updates)
+        if: >-
+          (steps.metadata.outputs.update-type == 'version-update:semver-minor' ||
+           steps.metadata.outputs.update-type == 'version-update:semver-patch') &&
+          !contains(steps.metadata.outputs.dependency-names, 'twitter-api-client')
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ github.token }}
