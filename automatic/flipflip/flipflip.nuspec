@@ -15,7 +15,7 @@ Built specifically for your hypnotic enjoyment 😵
     </description>
     <projectUrl>https://ififfy.github.io/flipflip</projectUrl>
     <tags>electron windows macos linux slideshow</tags>
-    <iconUrl>https://rawcdn.githack.com/ififfy/flipflip/ce8ead4cfb24a3270e06c14bb51500e6f95fad02/src/renderer/icons/flipflip_logo.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/ififfy/flipflip/ce8ead4cfb24a3270e06c14bb51500e6f95fad02/src/renderer/icons/flipflip_logo.png</iconUrl>
     <copyright>Copyright 2018 FlipFlip contributors</copyright>
     <licenseUrl>https://github.com/ififfy/flipflip/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

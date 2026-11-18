@@ -18,7 +18,7 @@ When used to receive files, qrcp serves an upload page and handles the transfer.
     </description>
     <projectUrl>https://github.com/claudiodangelis/qrcp</projectUrl>
     <tags>golang utility qrcode</tags>
-    <iconUrl>https://rawcdn.githack.com/claudiodangelis/qrcp/63dc1029bbf04688d2d3bec30a47d21b6eece43e/logo.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/claudiodangelis/qrcp@63dc1029bbf04688d2d3bec30a47d21b6eece43e/logo.svg</iconUrl>
     <copyright>Copyright (c) 2018 Claudio d'Angelis</copyright>
     <licenseUrl>https://github.com/claudiodangelis/qrcp/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

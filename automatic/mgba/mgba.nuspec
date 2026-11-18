@@ -14,7 +14,7 @@ mGBA is an emulator for running Game Boy Advance games. It aims to be faster and
     </description>
     <projectUrl>https://mgba.io/</projectUrl>
     <tags>mgba gameboy-emulator gameboy-advance-emulator gba gameboy-advance gameboy-color-emulator gameboy game-boy game-boy-emulator game-boy-advance game-boy-color</tags>
-    <iconUrl>https://rawcdn.githack.com/Xav83/chocolatey-packages/6efb7297d496d621b0fd56cad125614a323d2c54/automatic/mgba/icons/mgba-1024.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Xav83/chocolatey-packages@6efb7297d496d621b0fd56cad125614a323d2c54/automatic/mgba/icons/mgba-1024.png</iconUrl>
     <copyright>copyright © 2013–2020 Vicki Pfau.</copyright>
     <licenseUrl>https://github.com/mgba-emu/mgba/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

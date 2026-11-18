@@ -16,7 +16,7 @@ This is the latest and greatest mod package manager, made specifically for Perso
     </description>
     <projectUrl>https://github.com/TekkaGB/AemulusModManager</projectUrl>
     <tags>mod package manager persona pc</tags>
-    <iconUrl>https://rawcdn.githack.com/TekkaGB/AemulusModManager/ad1bc53f972726cbc8547f08c54cf27bb8a5beb1/aemulus_overlay.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/TekkaGB/AemulusModManager@ad1bc53f972726cbc8547f08c54cf27bb8a5beb1/aemulus_overlay.png</iconUrl>
     <copyright>GNU General Public License v3.0</copyright>
     <licenseUrl>https://github.com/TekkaGB/AemulusModManager/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

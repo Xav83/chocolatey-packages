@@ -24,7 +24,7 @@ The following package parameters can be set:
     </description>
     <projectUrl>https://conan.io/</projectUrl>
     <tags>conan C++ package manager</tags>
-    <iconUrl>https://rawcdn.githack.com/conan-io/conan/release/2.0/.github/conan2-logo-for-light.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/conan-io/conan@aa75401afefca2323d3273304eed921d47ea7928/.github/conan2-logo-for-light.svg</iconUrl>
     <copyright>Copyright 2016-2019, JFrog.</copyright>
     <licenseUrl>https://github.com/conan-io/conan/blob/develop/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

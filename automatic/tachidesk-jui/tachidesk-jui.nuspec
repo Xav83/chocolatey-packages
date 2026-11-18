@@ -18,7 +18,7 @@ On most platforms are binaries available if you don't want to install Java yours
     </description>
     <projectUrl>https://github.com/Suwayomi/Suwayomi-JUI</projectUrl>
     <tags>android kotlin manga desktop tachiyomi jetpack-compose jetbrains-compose compose-desktop compose-for-desktop tachidesk suwayomi compose-multiplatform</tags>
-    <iconUrl>https://rawcdn.githack.com/Suwayomi/Suwayomi-JUI/0e6ce98d470615bd854e4c40867e2d4c213494fc/resources/icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Suwayomi/Suwayomi-JUI@0e6ce98d470615bd854e4c40867e2d4c213494fc/resources/icon.png</iconUrl>
     <copyright>Copyright (C) 2020-2022 Syer and contributors</copyright>
     <licenseUrl>https://github.com/Suwayomi/Suwayomi-JUI/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

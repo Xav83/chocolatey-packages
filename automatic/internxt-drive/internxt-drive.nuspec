@@ -15,7 +15,7 @@ With Internxt Drive we focus on user-friendly encrypted storage with military-gr
     </description>
     <projectUrl>https://internxt.com/drive</projectUrl>
     <tags>windows macos linux cloud storage decentralized blockchain desktop cloud-storage</tags>
-    <iconUrl>https://rawcdn.githack.com/internxt/drive-desktop/8ab0c4b75e6a1d6ae5f0567579a934f562eab498/assets/icons/256x256.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/internxt/drive-desktop@8ab0c4b75e6a1d6ae5f0567579a934f562eab498/assets/icons/256x256.png</iconUrl>
     <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
     <licenseUrl>https://github.com/internxt/drive-desktop/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

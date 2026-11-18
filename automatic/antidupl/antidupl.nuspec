@@ -24,7 +24,7 @@ It is simple to use, has high speed and accuracy of work, supports Russian, Byel
     </description>
     <projectUrl>https://ermig1979.github.io/AntiDupl/english/index.html</projectUrl>
     <tags>graphic deduplication image</tags>
-    <iconUrl>https://rawcdn.githack.com/ermig1979/AntiDupl/b6f1fc4ae6784625ad93d342967f114e7bc2d918/docs/data/resources/icons/Icon.ico</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ermig1979/AntiDupl@b6f1fc4ae6784625ad93d342967f114e7bc2d918/docs/data/resources/icons/Icon.ico</iconUrl>
     <copyright>Copyright (c) 2002-2019 Ihar Yermalayeu,  Dmitry Borisov</copyright>
     <licenseUrl>https://github.com/ermig1979/AntiDupl/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

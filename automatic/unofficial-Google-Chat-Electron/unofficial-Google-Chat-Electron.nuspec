@@ -12,7 +12,7 @@
     <description>An unofficial desktop app for Google Chat built with Electron</description>
     <projectUrl>https://github.com/ankurk91/google-chat-electron</projectUrl>
     <tags>electron windows macos linux ubuntu hangouts desktop google-chat</tags>
-    <iconUrl>https://rawcdn.githack.com/ankurk91/google-chat-electron/9a7f138f0994987775dd881ac33a5f35a72eeb93/resources/icons/normal/64.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ankurk91/google-chat-electron@9a7f138f0994987775dd881ac33a5f35a72eeb93/resources/icons/normal/64.png</iconUrl>
     <copyright>GNU General Public License v3.0</copyright>
     <licenseUrl>https://github.com/ankurk91/google-chat-electron/blob/main/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

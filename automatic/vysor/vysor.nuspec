@@ -16,7 +16,7 @@ A desktop or web app, compatible with all operating systems.
     </description>
     <projectUrl>https://www.vysor.io/</projectUrl>
     <tags>android ios apple windows desktop phone mirror</tags>
-    <iconUrl>https://rawcdn.githack.com/koush/vysor.io/f1fea1572b01d38d260ce8014378261e6fd09fb9/icon.ico</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/koush/vysor.io@f1fea1572b01d38d260ce8014378261e6fd09fb9/icon.ico</iconUrl>
     <!--<copyright>GNU General Public License v3.0</copyright>-->
     <licenseUrl>https://github.com/koush/vysor.io/blob/master/VysorLicense.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

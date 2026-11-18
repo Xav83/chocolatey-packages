@@ -14,7 +14,7 @@ A new cross-platform Apple Music experience based on Electron and Vue.js written
     </description>
     <projectUrl>https://cider.sh</projectUrl>
     <tags>electron audio music windows macos linux open-source community performance music-player music-library discord lyrics itunes apple-music audio-player audio-streaming cider applemusic apple-music-electron</tags>
-    <iconUrl>https://rawcdn.githack.com/ciderapp/cider.sh/5ca4b5a3aa8f4949dfcacdf3df778705ef8f9ed7/assets/img/Cider-Logo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ciderapp/cider.sh@5ca4b5a3aa8f4949dfcacdf3df778705ef8f9ed7/assets/img/Cider-Logo.png</iconUrl>
     <copyright>GNU Affero General Public License v3.0</copyright>
     <licenseUrl>https://github.com/ciderapp/Cider/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -15,7 +15,7 @@ The goal of TaskBoard is to provide a simple and clean interface to a functional
     </description>
     <projectUrl>https://taskboard.matthewross.me/</projectUrl>
     <tags>markdown kanban task-manager task-board</tags>
-    <iconUrl>https://rawcdn.githack.com/kiswa/TaskBoard/21150fa150cc60d650e771cc98deea4f2e47fead/src/logo/SVG/taskboard.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/kiswa/TaskBoard@21150fa150cc60d650e771cc98deea4f2e47fead/src/logo/SVG/taskboard.svg</iconUrl>
     <copyright>Copyright (c) 2014-2020 Matthew Ross</copyright>
     <licenseUrl>https://github.com/kiswa/TaskBoard/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

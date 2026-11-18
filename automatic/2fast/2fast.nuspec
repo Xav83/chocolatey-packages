@@ -14,7 +14,7 @@
     </description>
     <projectUrl>https://2fast-app.de</projectUrl>
     <tags>android c-sharp authentication password windows-10 uwp-apps totp authenticator</tags>
-    <iconUrl>https://rawcdn.githack.com/2fast-team/2fast/2a99b3d1fdbfcd2c9d0b99a04face4ae1642b2b5/Project2FA/Project2FA.UWP/Assets/StoreLogo.scale-400.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/2fast-team/2fast@2a99b3d1fdbfcd2c9d0b99a04face4ae1642b2b5/Project2FA/Project2FA.UWP/Assets/StoreLogo.scale-400.png</iconUrl>
     <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
     <licenseUrl>https://github.com/2fast-team/2fast/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

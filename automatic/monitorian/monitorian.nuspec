@@ -22,7 +22,7 @@ Add-on features will not affect the function to recognize monitors. It is advise
     </description>
     <projectUrl>https://www.microsoft.com/store/apps/9nw33j738bl0</projectUrl>
     <tags>monitor display brightness luminance ddc-ci</tags>
-    <iconUrl>https://rawcdn.githack.com/emoacht/Monitorian/0cb4509d3255449ba665e5ed9c97a4d106e9e5d5/Source/Monitorian/Resources/Icons/AppIcon.ico</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/emoacht/Monitorian@0cb4509d3255449ba665e5ed9c97a4d106e9e5d5/Source/Monitorian/Resources/Icons/AppIcon.ico</iconUrl>
     <copyright>Copyright (c) 2017 emoacht</copyright>
     <licenseUrl>https://github.com/emoacht/Monitorian/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

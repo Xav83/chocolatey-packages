@@ -12,7 +12,7 @@
     <description>:postbox: Nifty Gmail desktop app for macOS, Linux and Windows </description>
     <projectUrl>https://github.com/timche/gmail-desktop</projectUrl>
     <tags>electron windows macos linux app ubuntu email gmail electron-app macos-app gmail-desktop </tags>
-    <iconUrl>https://rawcdn.githack.com/timche/gmail-desktop/aff32742fbcdc7c7b238f440a6d00880bf9d407c/media/icon.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/timche/gmail-desktop@aff32742fbcdc7c7b238f440a6d00880bf9d407c/media/icon.svg</iconUrl>
     <copyright>Copyright (c) Tim Cheung</copyright>
     <licenseUrl>https://github.com/timche/gmail-desktop/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

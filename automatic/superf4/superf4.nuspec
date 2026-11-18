@@ -23,7 +23,7 @@ You can enable TimerCheck to use an alternate detection method.
     </description>
     <projectUrl>https://stefansundin.github.io/superf4/</projectUrl>
     <tags>windows shortcut</tags>
-    <iconUrl>https://rawcdn.githack.com/stefansundin/superf4/6b677d422553e6b908b9eeaff4333b8b457e7bef/media/bowser.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/stefansundin/superf4@6b677d422553e6b908b9eeaff4333b8b457e7bef/media/bowser.png</iconUrl>
     <copyright>Copyright (C) Stefan Sundin.</copyright>
     <licenseUrl>https://github.com/stefansundin/superf4/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

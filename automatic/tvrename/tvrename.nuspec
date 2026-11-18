@@ -23,7 +23,7 @@ Grey's Anatomy - S03E04 - What I Am.avi
     </description>
     <projectUrl>https://www.tvrename.com/</projectUrl>
     <tags>monitor rename tv episodes tvdb rename-files tv-apps tv-series tv-shows tv-listings tv-show renamer tvdb-api tvshows tv-guide renaming-files tv-show-rename tv-videos tv-rename</tags>
-    <iconUrl>https://rawcdn.githack.com/TV-Rename/tvrename/89ea2819b7b42ae47034ae278c6ec419157d31e1/TVRename/Resources/tv3white.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/TV-Rename/tvrename@89ea2819b7b42ae47034ae278c6ec419157d31e1/TVRename/Resources/tv3white.png</iconUrl>
     <copyright>Copyright 2020 TV Rename.</copyright>
     <licenseUrl>https://github.com/TV-Rename/tvrename/blob/master/Licence.rtf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

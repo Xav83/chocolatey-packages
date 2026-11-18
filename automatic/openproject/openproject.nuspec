@@ -21,7 +21,7 @@ see the [Docker installation guide](https://www.openproject.org/docs/installatio
 ]]></description>
     <projectUrl>https://www.openproject.org</projectUrl>
     <tags>ruby source-code project-planning roadmap angular timeline bug-tracker issue-tracker project-management kanban scrum ifc openproject gantt-chart workflows gantt boards bcf</tags>
-    <iconUrl>https://rawcdn.githack.com/opf/openproject/754fc7bfb07a18de41b0f3a17d3340b3e3730911/app/assets/images/logo_openproject.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/opf/openproject@754fc7bfb07a18de41b0f3a17d3340b3e3730911/app/assets/images/logo_openproject.png</iconUrl>
     <copyright>OpenProject GmbH</copyright>
     <licenseUrl>https://github.com/opf/openproject/blob/dev/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

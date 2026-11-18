@@ -17,7 +17,7 @@ It is available for Android, iOS, Windows, Mac, and Linux.
     </description>
     <projectUrl>https://github.com/marchellodev/sharik</projectUrl>
     <tags>android windows macos linux app cross-platform file-sharing flutter</tags>
-    <iconUrl>https://rawcdn.githack.com/marchellodev/sharik/bc8ba23dd684f69b6459ef91bc5d4a6c91b59c0f/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/marchellodev/sharik@bc8ba23dd684f69b6459ef91bc5d4a6c91b59c0f/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png</iconUrl>
     <copyright>Copyright 2020 marchellodev</copyright>
     <licenseUrl>https://github.com/marchellodev/sharik/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

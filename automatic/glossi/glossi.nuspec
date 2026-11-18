@@ -17,7 +17,7 @@ It is the tool to enjoy any game that has trouble with Steam and/or add extra fu
     </description>
     <projectUrl>https://github.com/Alia5/GlosSI</projectUrl>
     <tags>steam controller uwp overlay steamcontroller uwp-games dualshock dualshock4 steam-input</tags>
-    <iconUrl>https://rawcdn.githack.com/Alia5/GlosSI/ee8157e38655f36c4d3ce132de68dd7e6bca9948/GloSC_Icon.ico</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Alia5/GlosSI@ee8157e38655f36c4d3ce132de68dd7e6bca9948/GloSC_Icon.ico</iconUrl>
     <copyright>Copyright 2017-2022 Peter Repukat - FlatspotSoftware</copyright>
     <licenseUrl>https://github.com/Alia5/GlosSI/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

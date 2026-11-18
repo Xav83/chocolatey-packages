@@ -18,7 +18,7 @@ While there are Faust contributors everywhere across the globe, Faust is mainly 
     </description>
     <projectUrl>https://faust.grame.fr/</projectUrl>
     <tags>audio c rust c-plus-plus csharp compiler cpp functional-programming julia dsp llvm dlang julia-language wasm faust jsfx jax cmajor rnbo</tags>
-    <iconUrl>https://rawcdn.githack.com/grame-cncm/faust/f0c79c111bda3280bd6c3937485eb7fbecd8f51e/build/package/faust-310x310.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/grame-cncm/faust@f0c79c111bda3280bd6c3937485eb7fbecd8f51e/build/package/faust-310x310.png</iconUrl>
     <copyright>Copyright (C) 2003-2019 GRAME, Centre National de Creation Musicale.</copyright>
     <licenseUrl>https://github.com/grame-cncm/faust/tree/master-dev#License-1-ov-file</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
