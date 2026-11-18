@@ -72,7 +72,7 @@ jobs:
       # pipx (preinstalled on the runners) avoids pip's "externally managed environment" error.
       - name: Install black and ruff
         run: |
-          for package in $(grep -E '^(black|ruff)==' requirements.txt); do pipx install "$package"; done
+          grep -E '^(black|ruff)==' requirements.txt | while read -r package; do pipx install "$package"; done
       - name: black
         run: black --check --diff scripts ops
       - name: ruff
