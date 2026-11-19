@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url64       = ''
-$checksum64  = ''
+$url64       = 'https://github.com/emoacht/Monitorian/releases/download/4.16.14-Installer/MonitorianInstaller41614.zip'
+$checksum64  = '0a84fddaa0eee1f5a88a37981b0dcd59d4fc263256430e7d8862c70a2f8bef4a'
 
 # The release asset is a ZIP that contains the MSI installer:
 # extract it to a temporary folder, then run the MSI silently.

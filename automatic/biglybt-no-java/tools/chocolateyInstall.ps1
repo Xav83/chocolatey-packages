@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url64       = 'https://github.com/BiglySoftware/BiglyBT/releases/download/v4.1.0.0/GitHub_BiglyBT_Windows_NoJRE.exe'
-$checksum64  = 'ab7e58c8cf3a94ed03e7a4c186b17ffbf6552db4909a7579796f4e3c4c23bfc9'
+$url64       = 'https://github.com/BiglySoftware/BiglyBT/releases/download/v4.2.0.0/GitHub_BiglyBT_Windows_NoJRE.exe'
+$checksum64  = '7a27ed366e7270d5877739efc558b3dca8e0772739d838da973539e4c576c10e'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
