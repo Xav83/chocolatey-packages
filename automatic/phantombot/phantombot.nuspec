@@ -23,9 +23,6 @@ PhantomBot has many modern features out of the box such as a built-in webpanel, 
     <copyright>PhantomBot © 2016 - 2020</copyright>
     <licenseUrl>https://github.com/PhantomBot/PhantomBot/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/PhantomBot/PhantomBot/releases)</releaseNotes>
     <docsUrl>https://phantombot.github.io/PhantomBot/guides/#guide=content/guides</docsUrl>
     <!--<bugTrackerUrl>https://community.phantom.bot/c/support/8</bugTrackerUrl>-->

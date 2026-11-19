@@ -19,9 +19,6 @@ View every achievements earned on your PC whether it's coming from Steam, a Stea
     <copyright>Copyright (c) xan105 and contributors</copyright>
     <licenseUrl>https://github.com/xan105/Achievement-Watcher/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Package Release Notes](https://github.com/xan105/Achievement-Watcher/releases)</releaseNotes>
     <docsUrl>https://github.com/xan105/Achievement-Watcher/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/xan105/Achievement-Watcher/issues</bugTrackerUrl>

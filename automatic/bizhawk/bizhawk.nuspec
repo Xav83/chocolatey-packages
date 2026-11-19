@@ -18,9 +18,6 @@ A multi-system emulator written in C#. As well as quality-of-life features for c
     <copyright>Copyright (c) BizHawk team</copyright>
     <licenseUrl>https://github.com/TASEmulators/BizHawk/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Package Release Notes](http://tasvideos.org/Bizhawk/ReleaseHistory.html)</releaseNotes>
     <docsUrl>http://tasvideos.org/Bizhawk/FAQ.html</docsUrl>
     <bugTrackerUrl>https://github.com/TASEmulators/BizHawk/issues</bugTrackerUrl>

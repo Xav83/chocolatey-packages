@@ -19,9 +19,6 @@ Built specifically for your hypnotic enjoyment 😵
     <copyright>Copyright 2018 FlipFlip contributors</copyright>
     <licenseUrl>https://github.com/ififfy/flipflip/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/ififfy/flipflip/releases)</releaseNotes>
     <docsUrl>https://github.com/ififfy/flipflip/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/ififfy/flipflip/issues</bugTrackerUrl>

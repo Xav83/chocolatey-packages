@@ -19,9 +19,6 @@ If you are a plugin user looking to report a problem with a plugin to the develo
     <copyright>Copyright (c) Tracktion and contributors</copyright>
     <licenseUrl>https://github.com/Tracktion/pluginval/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Package Release Notes](https://github.com/Tracktion/pluginval/blob/develop/CHANGELIST.md)</releaseNotes>
     <docsUrl>https://github.com/Tracktion/pluginval/tree/develop/docs</docsUrl>
     <bugTrackerUrl>https://github.com/Tracktion/pluginval/issues</bugTrackerUrl>

@@ -19,9 +19,6 @@ With Internxt Drive we focus on user-friendly encrypted storage with military-gr
     <copyright>Copyright (c) 2024 Internxt</copyright>
     <licenseUrl>https://github.com/internxt/drive-desktop/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/internxt/drive-desktop/releases)</releaseNotes>
     <docsUrl>https://electron-react-boilerplate.js.org/docs/installation</docsUrl>
     <bugTrackerUrl>https://github.com/internxt/drive-desktop/issues</bugTrackerUrl>

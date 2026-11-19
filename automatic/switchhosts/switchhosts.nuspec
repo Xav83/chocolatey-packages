@@ -19,9 +19,6 @@ It is a free and open source software.
     <copyright>Copyright 2011-2025 oldj</copyright>
     <licenseUrl>https://github.com/oldj/SwitchHosts/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/oldj/SwitchHosts/releases)</releaseNotes>
     <docsUrl>https://github.com/oldj/SwitchHosts/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/oldj/SwitchHosts/issues</bugTrackerUrl>

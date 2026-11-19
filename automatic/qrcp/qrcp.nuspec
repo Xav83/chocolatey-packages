@@ -22,9 +22,6 @@ When used to receive files, qrcp serves an upload page and handles the transfer.
     <copyright>Copyright (c) 2018 Claudio d'Angelis</copyright>
     <licenseUrl>https://github.com/claudiodangelis/qrcp/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/claudiodangelis/qrcp/releases)</releaseNotes>
     <docsUrl>https://github.com/claudiodangelis/qrcp#usage</docsUrl>
     <bugTrackerUrl>https://github.com/claudiodangelis/qrcp/issues</bugTrackerUrl>

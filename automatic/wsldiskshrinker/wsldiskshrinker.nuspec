@@ -20,9 +20,6 @@ This small tool can help you reduce the disk usage of WSL distros.
     <copyright>Copyright (c) 2021 Believers in Science Studio</copyright>
     <licenseUrl>https://github.com/kxxt/WSLDiskShrinker/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/kxxt/WSLDiskShrinker/releases)</releaseNotes>
     <docsUrl>https://github.com/kxxt/WSLDiskShrinker/blob/master/README.MD</docsUrl>
     <bugTrackerUrl>https://github.com/kxxt/WSLDiskShrinker/issues</bugTrackerUrl>

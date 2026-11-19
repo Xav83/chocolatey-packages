@@ -19,9 +19,6 @@ Within this tool, you'll have everything you need to build a sophisticated conve
     <copyright>Copyright (c) Microsoft Corporation.</copyright>
     <licenseUrl>https://github.com/microsoft/BotFramework-Composer/blob/main/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/microsoft/BotFramework-Composer/releases)</releaseNotes>
     <docsUrl>https://github.com/microsoft/BotFramework-Composer/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/microsoft/BotFramework-Composer/issues</bugTrackerUrl>

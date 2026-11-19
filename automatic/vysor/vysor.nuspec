@@ -20,9 +20,6 @@ A desktop or web app, compatible with all operating systems.
     <!--<copyright>GNU General Public License v3.0</copyright>-->
     <licenseUrl>https://github.com/koush/vysor.io/blob/master/VysorLicense.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Change Log](https://github.com/koush/vysor.io#change-log)</releaseNotes>
     <docsUrl>https://github.com/koush/vysor.io/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/koush/vysor.io/issues</bugTrackerUrl>

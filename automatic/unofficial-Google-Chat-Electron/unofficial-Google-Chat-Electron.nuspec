@@ -16,9 +16,6 @@
     <copyright>Copyright (c) ankurk91 and contributors</copyright>
     <licenseUrl>https://github.com/ankurk91/google-chat-electron/blob/main/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/ankurk91/google-chat-electron/releases)</releaseNotes>
     <docsUrl>https://github.com/ankurk91/google-chat-electron#readme</docsUrl>
     <bugTrackerUrl>https://github.com/ankurk91/google-chat-electron/issues</bugTrackerUrl>

@@ -25,9 +25,6 @@ see the [Docker installation guide](https://www.openproject.org/docs/installatio
     <copyright>OpenProject GmbH</copyright>
     <licenseUrl>https://github.com/opf/openproject/blob/dev/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://www.openproject.org/docs/release-notes)</releaseNotes>
     <docsUrl>https://www.openproject.org/docs</docsUrl>
     <bugTrackerUrl>https://www.openproject.org/docs/development/report-a-bug/</bugTrackerUrl>

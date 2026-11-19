@@ -16,9 +16,6 @@
     <copyright>Copyright (c) 2020 Arjun Ganesan</copyright>
     <licenseUrl>https://github.com/arjun-g/google-meet-desktop/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/arjun-g/google-meet-desktop/releases)</releaseNotes>
     <docsUrl>https://github.com/arjun-g/google-meet-desktop/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/arjun-g/google-meet-desktop/issues</bugTrackerUrl>

@@ -17,9 +17,6 @@ Hopsan is a free open-source multi-domain system simulation tool developed at th
     <copyright>Copyright (C) 2009 - Hopsan</copyright>
     <licenseUrl>https://github.com/Hopsan/hopsan/blob/master/LICENSE-ALv2</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/Hopsan/hopsan/releases)</releaseNotes>
     <docsUrl>https://hopsan.github.io/documentation/</docsUrl>
     <bugTrackerUrl>https://github.com/Hopsan/hopsan/issues</bugTrackerUrl>

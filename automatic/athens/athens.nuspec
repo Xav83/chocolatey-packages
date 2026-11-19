@@ -19,9 +19,6 @@ Athens does this through a graph database that enables bottom-up structure and r
     <copyright>Copyright (c) Athens Research and contributors</copyright>
     <licenseUrl>https://github.com/athensresearch/athens/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Changelog](https://github.com/athensresearch/athens/blob/main/CHANGELOG.md)</releaseNotes>
     <docsUrl>https://athensresearch.github.io/docs/</docsUrl>
     <bugTrackerUrl>https://github.com/athensresearch/athens/issues</bugTrackerUrl>

@@ -21,9 +21,6 @@ If so that's pretty weird! But now it's possible.
     <copyright>Copyright (c) SteamGridDB and contributors</copyright>
     <licenseUrl>https://github.com/SteamGridDB/steam-rom-manager/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Changelog](https://github.com/SteamGridDB/steam-rom-manager/blob/master/CHANGELOG.md)</releaseNotes>
     <docsUrl>https://steamgriddb.github.io/steam-rom-manager</docsUrl>
     <bugTrackerUrl>https://github.com/SteamGridDB/steam-rom-manager/issues</bugTrackerUrl>

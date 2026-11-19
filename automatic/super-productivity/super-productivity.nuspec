@@ -19,9 +19,6 @@
     <copyright>Copyright (c) 2018 Johannes Millan</copyright>
     <licenseUrl>https://github.com/super-productivity/super-productivity/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/super-productivity/super-productivity/releases)</releaseNotes>
     <docsUrl>https://github.com/super-productivity/super-productivity/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/super-productivity/super-productivity/issues</bugTrackerUrl>

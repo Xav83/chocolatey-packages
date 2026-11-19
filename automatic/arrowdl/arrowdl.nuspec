@@ -20,9 +20,6 @@ It aims to work with latest versions of Mozilla Firefox (powered by WebExtension
     <copyright>Copyright (c) setvisible and contributors</copyright>
     <licenseUrl>https://github.com/setvisible/DownZemAll/blob/develop/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/setvisible/ArrowDL/releases)</releaseNotes>
     <docsUrl>https://github.com/setvisible/ArrowDL#readme</docsUrl>
     <bugTrackerUrl>https://github.com/setvisible/ArrowDL/issues</bugTrackerUrl>

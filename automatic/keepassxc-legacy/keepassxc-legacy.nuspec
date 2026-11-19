@@ -28,9 +28,6 @@ Note:
     <copyright>Copyright (c) KeePassXC Team and contributors</copyright>
     <licenseUrl>https://github.com/keepassxreboot/keepassxc/blob/develop/LICENSE.LGPL-3</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Changelog](https://github.com/keepassxreboot/keepassxc/blob/develop/CHANGELOG.md)</releaseNotes>
     <docsUrl>https://github.com/keepassxreboot/keepassxc/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/keepassxreboot/keepassxc/issues</bugTrackerUrl>

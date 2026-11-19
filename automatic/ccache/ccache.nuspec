@@ -19,9 +19,6 @@ Ccache (or “ccache”) is a compiler cache. It speeds up recompilation by cach
   Copyright (C) 2009-2020 Joel Rosdahl</copyright>
     <licenseUrl>https://ccache.dev/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Package Release Notes](https://ccache.dev/releasenotes.html)</releaseNotes>
     <docsUrl>https://ccache.dev/manual/latest.html</docsUrl>
     <bugTrackerUrl>https://github.com/ccache/ccache/issues</bugTrackerUrl>

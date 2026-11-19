@@ -20,9 +20,6 @@ Like DOSBox, it emulates a PC necessary for running many MS-DOS games and applic
     <copyright>Copyright (c) Jonathan Campbell and the DOSBox-X contributors</copyright>
     <licenseUrl>https://github.com/joncampbell123/dosbox-x/blob/dosbox-x-v0.83.3/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Changelog](https://github.com/joncampbell123/dosbox-x/blob/dosbox-x-v0.83.3/CHANGELOG)</releaseNotes>
     <docsUrl>https://github.com/joncampbell123/dosbox-x/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/joncampbell123/dosbox-x/issues</bugTrackerUrl>

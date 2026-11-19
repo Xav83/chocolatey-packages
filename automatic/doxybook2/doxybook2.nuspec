@@ -18,9 +18,6 @@ Doxygen XML to Markdown (or JSON) converter. Generate beautiful C++ documentatio
     <copyright>Copyright (c) 2019-2020 Matus Novak</copyright>
     <licenseUrl>https://github.com/matusnovak/doxybook2/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Package Release Notes](https://github.com/matusnovak/doxybook2/releases)</releaseNotes>
     <docsUrl>https://github.com/matusnovak/doxybook2/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/matusnovak/doxybook2/issues</bugTrackerUrl>

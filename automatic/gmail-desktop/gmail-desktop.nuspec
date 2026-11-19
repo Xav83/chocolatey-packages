@@ -16,9 +16,6 @@
     <copyright>Copyright (c) Tim Cheung</copyright>
     <licenseUrl>https://github.com/timche/gmail-desktop/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/timche/gmail-desktop/releases)</releaseNotes>
     <docsUrl>https://github.com/timche/gmail-desktop/blob/main/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/timche/gmail-desktop/issues</bugTrackerUrl>

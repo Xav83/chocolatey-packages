@@ -27,9 +27,6 @@ You can enable TimerCheck to use an alternate detection method.
     <copyright>Copyright (C) Stefan Sundin.</copyright>
     <licenseUrl>https://github.com/stefansundin/superf4/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/stefansundin/superf4/releases)</releaseNotes>
     <docsUrl>https://stefansundin.github.io/superf4</docsUrl>
     <bugTrackerUrl>https://github.com/stefansundin/superf4/issues</bugTrackerUrl>

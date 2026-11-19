@@ -21,9 +21,6 @@ It is available for Android, iOS, Windows, Mac, and Linux.
     <copyright>Copyright 2020 marchellodev</copyright>
     <licenseUrl>https://github.com/marchellodev/sharik/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/marchellodev/sharik/releases)</releaseNotes>
     <docsUrl>https://github.com/marchellodev/sharik/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/marchellodev/sharik/issues</bugTrackerUrl>

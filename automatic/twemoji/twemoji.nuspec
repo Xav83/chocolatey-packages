@@ -17,9 +17,6 @@ A color and B W emoji SVG-OpenType / SVGinOT font built from the Twitter Emoji f
     <copyright>Copyright (c) Brad Erickson (13rac1) and contributors</copyright>
     <licenseUrl>https://github.com/eosrei/twemoji-color-font/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Package Release Notes](https://github.com/eosrei/twemoji-color-font/releases)</releaseNotes>
     <docsUrl>https://github.com/eosrei/twemoji-color-font#examples</docsUrl>
     <bugTrackerUrl>https://github.com/eosrei/twemoji-color-font/issues</bugTrackerUrl>

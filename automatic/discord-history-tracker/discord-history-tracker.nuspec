@@ -18,9 +18,6 @@ Discord History Tracker lets you save chat history in your servers, groups, and 
     <copyright>Copyright (c) 2016 Daniel Chýlek</copyright>
     <licenseUrl>https://github.com/chylex/Discord-History-Tracker/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/chylex/Discord-History-Tracker/releases)</releaseNotes>
     <docsUrl>https://github.com/chylex/Discord-History-Tracker/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/chylex/Discord-History-Tracker/issues</bugTrackerUrl>

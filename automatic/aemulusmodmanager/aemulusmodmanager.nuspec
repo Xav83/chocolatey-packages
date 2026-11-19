@@ -20,9 +20,6 @@ This is the latest and greatest mod package manager, made specifically for Perso
     <copyright>Copyright (c) TekkaGB and contributors</copyright>
     <licenseUrl>https://github.com/TekkaGB/AemulusModManager/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/TekkaGB/AemulusModManager/releases)</releaseNotes>
     <docsUrl>https://github.com/TekkaGB/AemulusModManager/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/TekkaGB/AemulusModManager/issues</bugTrackerUrl>

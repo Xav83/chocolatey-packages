@@ -18,9 +18,6 @@ mGBA is an emulator for running Game Boy Advance games. It aims to be faster and
     <copyright>copyright © 2013–2020 Vicki Pfau.</copyright>
     <licenseUrl>https://github.com/mgba-emu/mgba/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Package Changelog](https://github.com/mgba-emu/mgba/blob/master/CHANGES)</releaseNotes>
     <docsUrl>https://mgba.io/faq.html</docsUrl>
     <bugTrackerUrl>https://github.com/mgba-emu/mgba/issues</bugTrackerUrl>

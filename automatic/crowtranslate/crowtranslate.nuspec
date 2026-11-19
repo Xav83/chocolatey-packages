@@ -18,9 +18,6 @@ Crow Translate is a simple and lightweight translator written in C++ / Qt that a
     <copyright>Crow Translate contributors</copyright>
     <licenseUrl>https://invent.kde.org/office/crow-translate/-/tree/master/LICENSES</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://invent.kde.org/office/crow-translate/-/releases)</releaseNotes>
     <docsUrl>https://invent.kde.org/office/crow-translate/-/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://bugs.kde.org/describecomponents.cgi?product=Crow%20Translate</bugTrackerUrl>

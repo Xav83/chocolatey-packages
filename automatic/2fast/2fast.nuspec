@@ -18,9 +18,6 @@
     <copyright>Copyright (c) 2fast-team and contributors</copyright>
     <licenseUrl>https://github.com/2fast-team/2fast/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/2fast-team/2fast/releases)</releaseNotes>
     <docsUrl>https://github.com/2fast-team/2fast/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/2fast-team/2fast/issues</bugTrackerUrl>

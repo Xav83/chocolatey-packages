@@ -18,9 +18,6 @@ bsnes-hd (called "HD Mode 7 mod, for bsnes" in early betas) is a fork of bsnes (
     <copyright>Copyright (c) DerKoun and contributors</copyright>
     <licenseUrl>https://github.com/DerKoun/bsnes-hd/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/DerKoun/bsnes-hd/releases)</releaseNotes>
     <docsUrl>https://github.com/DerKoun/bsnes-hd/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/DerKoun/bsnes-hd/issues</bugTrackerUrl>

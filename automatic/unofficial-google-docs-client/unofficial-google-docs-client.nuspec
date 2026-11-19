@@ -20,9 +20,6 @@ So we made an app for Google Docs, Sheets, Slides for Windows, macOS, and Linux.
     <copyright>Copyright (c) 2023 Tech Fiddle</copyright>
     <licenseUrl>https://github.com/Comp-Labs/Google-Docs/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/Comp-Labs/Google-Docs/releases)</releaseNotes>
     <docsUrl>https://github.com/Comp-Labs/Google-Docs/blob/main/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/Comp-Labs/Google-Docs/issues</bugTrackerUrl>

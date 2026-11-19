@@ -21,9 +21,6 @@ It is not meant to be a mass downloader to stock up thousands of chapters that a
     <copyright>Released into the public domain by the HakuNeko contributors</copyright>
     <licenseUrl>https://github.com/manga-download/hakuneko/blob/master/UNLICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Package Release Notes](https://github.com/manga-download/hakuneko/releases)</releaseNotes>
     <docsUrl>https://github.com/manga-download/hakuneko/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/manga-download/hakuneko/issues</bugTrackerUrl>

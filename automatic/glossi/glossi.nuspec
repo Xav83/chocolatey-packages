@@ -21,9 +21,6 @@ It is the tool to enjoy any game that has trouble with Steam and/or add extra fu
     <copyright>Copyright 2017-2022 Peter Repukat - FlatspotSoftware</copyright>
     <licenseUrl>https://github.com/Alia5/GlosSI/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/Alia5/GlosSI/releases)</releaseNotes>
     <docsUrl>https://github.com/Alia5/GlosSI/blob/main/Readme.md</docsUrl>
     <bugTrackerUrl>https://github.com/Alia5/GlosSI/issues</bugTrackerUrl>

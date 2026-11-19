@@ -26,9 +26,6 @@ Add-on features will not affect the function to recognize monitors. It is advise
     <copyright>Copyright (c) 2017 emoacht</copyright>
     <licenseUrl>https://github.com/emoacht/Monitorian/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/emoacht/Monitorian/releases)</releaseNotes>
     <docsUrl>https://github.com/emoacht/Monitorian/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/emoacht/Monitorian/issues</bugTrackerUrl>

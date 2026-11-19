@@ -16,9 +16,6 @@
     <copyright>Copyright (c) TDesktop-x64 and contributors</copyright>
     <licenseUrl>https://github.com/TDesktop-x64/tdesktop/blob/dev/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/TDesktop-x64/tdesktop/releases)</releaseNotes>
     <docsUrl>https://github.com/TDesktop-x64/tdesktop/blob/dev/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/TDesktop-x64/tdesktop/issues</bugTrackerUrl>
