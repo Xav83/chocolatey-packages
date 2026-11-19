@@ -6,7 +6,9 @@ Checks, for every package:
 - <id> matches the package folder name;
 - <version> is a valid version without leading zeros (the community repository rejects them);
 - <packageSourceUrl> points to this package's folder in this repository;
-- <dependency> elements have an id, and the <file src> folders exist.
+- <dependency> elements have an id, and the <file src> folders exist;
+- <copyright> names a copyright holder, not a licence (e.g. "MIT License", or the
+  "Free Software Foundation" line copied from the GPL text).
 
 And for the whole repository:
 - the package table of README.md lists every package folder, and only those.
@@ -93,6 +95,20 @@ for path in sorted(glob.glob("automatic/*/*.nuspec")):
         report(
             path,
             "<description> is too short (the community repository wants at least 30 characters)",
+        )
+
+    copyright_ = fields.get("copyright", "")
+    if copyright_ and (
+        "Free Software Foundation" in copyright_
+        or (
+            re.search(r"licen[cs]e", copyright_, re.I)
+            and not re.search(r"copyright|©|\(c\)|public domain", copyright_, re.I)
+        )
+    ):
+        report(
+            path,
+            f"<copyright>{copyright_}</copyright> is a licence, not a copyright holder "
+            "(the licence belongs in <licenseUrl>)",
         )
 
     for element in root.iter():

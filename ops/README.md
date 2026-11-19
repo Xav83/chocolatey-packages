@@ -6,7 +6,7 @@ Scripts used by the packages, by CI and by the Git pre-commit hook.
 | --- | --- | --- |
 | `Get-GitHubReleaseAsset.ps1` | `automatic/*/update.ps1` | Shared helper to find the latest GitHub release of a package (see below). |
 | `Format-Files.ps1` | pre-commit hook, `lint.yml` | Applies (`-Fix`) or checks (`-Check`) the `.editorconfig` rules: encoding, line endings, trailing whitespace, final newline. |
-| `test_nuspecs.py` | pre-commit hook, `lint.yml` | Validates the nuspecs (required fields, id = folder name, normalized version, `packageSourceUrl`, dependencies, files) and checks that the package table of `README.md` lists every package. |
+| `test_nuspecs.py` | pre-commit hook, `lint.yml` | Validates the nuspecs (required fields, id = folder name, normalized version, `packageSourceUrl`, dependencies, files, a copyright holder instead of a licence name) and checks that the package table of `README.md` lists every package. |
 | `test_package_scripts.py` | pre-commit hook, `lint.yml` | Checks that every `au_SearchReplace` pattern of `update.ps1` matches its target file. |
 
 ## Shared helper for AU update scripts
