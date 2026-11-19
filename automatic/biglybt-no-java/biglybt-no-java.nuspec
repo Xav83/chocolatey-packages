@@ -25,7 +25,7 @@ If a suitable Java runtime is already installed on your machine, you can skip th
     <projectUrl>https://www.biglybt.com</projectUrl>
     <tags>torrent torrent-management bittorrent p2p bittorrent-client torrent-client torrent-downloader i2p</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/BiglySoftware/BiglyBT@612df45446acf8f8b4a252c95c78842e0c04a17a/uis/src/com/biglybt/ui/icons/a64.png</iconUrl>
-    <copyright>Copyright (C) 1989, 1991 Free Software Foundation, Inc.</copyright>
+    <copyright>Copyright (c) Bigly Software</copyright>
     <licenseUrl>https://github.com/BiglySoftware/BiglyBT/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>[Release Notes](https://github.com/BiglySoftware/BiglyBT/blob/master/ChangeLog.txt)</releaseNotes>

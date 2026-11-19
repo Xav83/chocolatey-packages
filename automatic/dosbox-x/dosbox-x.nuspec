@@ -17,7 +17,7 @@ Like DOSBox, it emulates a PC necessary for running many MS-DOS games and applic
     <projectUrl>http://dosbox-x.com/</projectUrl>
     <tags>dosbox dosbox-x dos emulator</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/joncampbell123/dosbox-x@78c022931f0ad9e567bcaaefc155fc428d9bdc7e/contrib/icons/dosbox-x.svg</iconUrl>
-    <copyright> GNU General Public License, version 2</copyright>
+    <copyright>Copyright (c) Jonathan Campbell and the DOSBox-X contributors</copyright>
     <licenseUrl>https://github.com/joncampbell123/dosbox-x/blob/dosbox-x-v0.83.3/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
