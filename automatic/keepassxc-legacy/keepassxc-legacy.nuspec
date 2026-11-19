@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>keepassxc-legacy</id>
     <title>KeePassXC Legacy</title>
-    <version>2.7.1</version>
+    <version>2.7.12</version>
     <authors>KeePassXC</authors>
     <owners>Xav83</owners>
     <summary>KeePassXC is a cross-platform community-driven port of the Windows application “Keepass Password Safe”.</summary>
