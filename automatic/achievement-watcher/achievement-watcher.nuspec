@@ -16,7 +16,7 @@ View every achievements earned on your PC whether it's coming from Steam, a Stea
     <projectUrl>https://xan105.github.io/Achievement-Watcher/</projectUrl>
     <tags>steam notification uplay rpcs3 trophy achievement playtime-tracking</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/xan105/Achievement-Watcher@1507bc5e2fa570cc46e5a225ae0a4a282b897d5f/app/resources/icon/icon.png</iconUrl>
-    <copyright>GNU Lesser General Public License v3.0</copyright>
+    <copyright>Copyright (c) xan105 and contributors</copyright>
     <licenseUrl>https://github.com/xan105/Achievement-Watcher/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

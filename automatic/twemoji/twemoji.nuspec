@@ -14,7 +14,7 @@ A color and B W emoji SVG-OpenType / SVGinOT font built from the Twitter Emoji f
     <projectUrl>https://github.com/eosrei/twemoji-color-font</projectUrl>
     <tags>emoji linux font monospace-font svginot color-emoji twitter-emoji color-font opentype-svg-fonts </tags>
     <!--<iconUrl>https://raw.githubusercontent.com/manga-download/hakuneko/master/res/icns/logo_128.png</iconUrl>-->
-    <copyright>MIT Licence</copyright>
+    <copyright>Copyright (c) Brad Erickson (13rac1) and contributors</copyright>
     <licenseUrl>https://github.com/eosrei/twemoji-color-font/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

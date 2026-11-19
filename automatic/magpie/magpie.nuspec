@@ -16,7 +16,7 @@ The main goal is to tackle the situations where the games either do not natively
     <projectUrl>https://github.com/Blinue/Magpie</projectUrl>
     <tags>capture hlsl super-resolution magnifier cppwinrt fsr anime4k</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/Blinue/Magpie@c8c0353afa0fc77592ecc8e408cf5a6be7a1ba21/src/Magpie/Icons/PNG/Magpie%20Icon%20Full%20Enabled/128.png</iconUrl>
-    <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
+    <copyright>Copyright (c) Blinue and contributors</copyright>
     <licenseUrl>https://github.com/Blinue/Magpie/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

@@ -6,7 +6,7 @@
     <id>internxt-drive</id>
     <title>Internxt Drive</title>
     <version>2.7.3</version>
-    <authors>ankurk91</authors>
+    <authors>Internxt</authors>
     <owners>Xav83</owners>
     <summary>The safest cloud storage for all your files, photos, and more.</summary>
     <description>
@@ -16,7 +16,7 @@ With Internxt Drive we focus on user-friendly encrypted storage with military-gr
     <projectUrl>https://internxt.com/drive</projectUrl>
     <tags>windows macos linux cloud storage decentralized blockchain desktop cloud-storage</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/internxt/drive-desktop@8ab0c4b75e6a1d6ae5f0567579a934f562eab498/assets/icons/256x256.png</iconUrl>
-    <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
+    <copyright>Copyright (c) 2024 Internxt</copyright>
     <licenseUrl>https://github.com/internxt/drive-desktop/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

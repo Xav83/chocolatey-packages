@@ -16,7 +16,7 @@ If you are a plugin user looking to report a problem with a plugin to the develo
     <projectUrl>https://www.tracktion.com/develop/pluginval</projectUrl>
     <tags>plugin vst au vst3 tests validation</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/Tracktion/pluginval@286684f72062250fd2494681b7ebdcb721f09e0d/source/binarydata/icon.svg</iconUrl>
-    <copyright>GNU General Public License v3.0</copyright>
+    <copyright>Copyright (c) Tracktion and contributors</copyright>
     <licenseUrl>https://github.com/Tracktion/pluginval/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

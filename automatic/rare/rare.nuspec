@@ -16,7 +16,7 @@ Rare is a graphical interface for Legendary, a command line alternative to Epic 
     <projectUrl>https://github.com/RareDevs/Rare</projectUrl>
     <tags>linux games frontend pyqt5 epic-games legendary epic-games-launcher</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/RareDevs/Rare@e6fc2323f184b7f59a615038441ed84bacb57abf/rare/resources/images/Rare.png</iconUrl>
-    <copyright>Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
+    <copyright>Copyright (c) RareDevs and contributors</copyright>
     <licenseUrl>https://github.com/RareDevs/Rare/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

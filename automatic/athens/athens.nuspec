@@ -16,7 +16,7 @@ Athens does this through a graph database that enables bottom-up structure and r
     <projectUrl>https://github.com/athensresearch/athens</projectUrl>
     <tags>knowledge-graph knowledge-base memex knowledge-management notetaking tools-for-thought </tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/athensresearch/athens@962c46434e841fad4216cbc4c37e313ea5c856ba/resources/public/favicon.png</iconUrl>
-    <copyright>Eclipse Public License - v 1.0</copyright>
+    <copyright>Copyright (c) Athens Research and contributors</copyright>
     <licenseUrl>https://github.com/athensresearch/athens/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

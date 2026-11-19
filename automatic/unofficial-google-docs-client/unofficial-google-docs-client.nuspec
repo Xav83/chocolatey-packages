@@ -17,7 +17,7 @@ So we made an app for Google Docs, Sheets, Slides for Windows, macOS, and Linux.
     <projectUrl>https://github.com/Comp-Labs/Google-Docs</projectUrl>
     <tags>electron windows macos app google-drive google-sheets google-docs linux-desktop google-slides google-forms </tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/Comp-Labs/Google-Docs@v2022.3.10/icon.png</iconUrl>
-    <copyright>MIT License</copyright>
+    <copyright>Copyright (c) 2023 Tech Fiddle</copyright>
     <licenseUrl>https://github.com/Comp-Labs/Google-Docs/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

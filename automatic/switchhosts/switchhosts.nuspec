@@ -16,7 +16,7 @@ It is a free and open source software.
     <projectUrl>https://switchhosts.vercel.app/</projectUrl>
     <tags>electron hosts hostsfile hostseditor switch-hosts switchhosts</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/oldj/SwitchHosts@cd27432c23331fcc84a6f55c8c7a3ed0999a46ed/assets/app.svg</iconUrl>
-    <copyright>Apache License 2.0</copyright>
+    <copyright>Copyright 2011-2025 oldj</copyright>
     <licenseUrl>https://github.com/oldj/SwitchHosts/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

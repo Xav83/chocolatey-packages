@@ -13,7 +13,7 @@
     <projectUrl>https://github.com/arjun-g/google-meet-desktop</projectUrl>
     <tags>electron google googlemeet</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/arjun-g/google-meet-desktop@060e38899d534d2b393c650ae3ff6a20c01ee049/build/icon.png</iconUrl>
-    <copyright>MIT License</copyright>
+    <copyright>Copyright (c) 2020 Arjun Ganesan</copyright>
     <licenseUrl>https://github.com/arjun-g/google-meet-desktop/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>

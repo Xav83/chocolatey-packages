@@ -25,7 +25,7 @@ Note:
     <projectUrl>https://keepassxc.org/</projectUrl>
     <tags>windows macos linux security privacy cross-platform password-manager yubikey password keepass hacktoberfest keepassxc</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@4315dbe8325d644de2026206bdc5c16a11c1f5cc/icons/keepassxc.svg</iconUrl>
-    <copyright>GNU LESSER GENERAL PUBLIC LICENSE Version 3</copyright>
+    <copyright>Copyright (c) KeePassXC Team and contributors</copyright>
     <licenseUrl>https://github.com/keepassxreboot/keepassxc/blob/develop/LICENSE.LGPL-3</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<dependencies>
