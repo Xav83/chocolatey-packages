@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'tvrename'
-$url32       = 'https://github.com/TV-Rename/tvrename/releases/download/v5.2.8/TVRename-v5.2.8-Installer.exe'
-$checksum32  = 'a170be52ec27e84310c57bc472b8679c932de529c76f9928221a3ea3945d2e08'
+$url32       = 'https://github.com/TV-Rename/tvrename/releases/download/v5.2.9/TVRename-v5.2.9-Installer.exe'
+$checksum32  = 'b06341c5425055a1cb74b5b4348908e1c1c11d77d241431ee96d1efefbb1d2d1'
 
 $packageArgs = @{
   packageName    = $packageName
