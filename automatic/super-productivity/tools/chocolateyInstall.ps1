@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url64       = 'https://github.com/super-productivity/super-productivity/releases/download/v20.0.0/Super-Productivity-Setup-x64.exe'
-$checksum64  = '246b5e0ab1b2aa495353e2bcbeadb763747ecec90ae007f6273d24a5f0346350'
+$url64       = 'https://github.com/super-productivity/super-productivity/releases/download/v20.1.0/Super-Productivity-Setup-x64.exe'
+$checksum64  = '0996fb9696c5180c6e48be422ebdd19431de5e8778a2a0e0888ec922eeec5bbd'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
