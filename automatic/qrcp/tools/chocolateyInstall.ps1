@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url32       = 'https://github.com/claudiodangelis/qrcp/releases/download/v0.11.7/qrcp_0.11.7_windows_386.tar.gz'
-$url64       = 'https://github.com/claudiodangelis/qrcp/releases/download/v0.11.7/qrcp_0.11.7_windows_amd64.tar.gz'
-$checksum32  = '0caf376057357220c10cda6d4840dbab39a1bf983dd520a4375eee621165e9ed'
-$checksum64  = '072082e1bace619f3fedba2b3189d3f6420d32a2dbb87d5831c9b883b95f47f7'
+$url32       = 'https://github.com/claudiodangelis/qrcp/releases/download/v0.12.0/qrcp_0.12.0_windows_386.tar.gz'
+$url64       = 'https://github.com/claudiodangelis/qrcp/releases/download/v0.12.0/qrcp_0.12.0_windows_amd64.tar.gz'
+$checksum32  = '5bd702ecfd4c80e871ebfbebbe588afa323aa7aa01760bb0e540c356b8be77f4'
+$checksum64  = 'e1ebb8c4c6aaa654fa549a796f515a6c2c0a773bf4449e62a3825f0f62ae8eb0'
 
 $packageArgs = @{
   packageName    = $Env:ChocolateyPackageName
