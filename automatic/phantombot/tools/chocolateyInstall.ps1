@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = $env:ChocolateyPackageName
-$url32       = 'https://github.com/PhantomBot/PhantomBot/releases/download/v3.24.3.0/PhantomBot-3.24.3.0-win.zip'
-$checksum32  = 'c8d21457460ab3c39db5867ae6533fa0ab7ae3a4bfc2aea1f6c091673fcdae45'
+$url32       = 'https://github.com/PhantomBot/PhantomBot/releases/download/v3.24.4.0/PhantomBot-3.24.4.0-win.zip'
+$checksum32  = '51180c1cc2f00c0b9ea58f71106b12dca3660ff3235411f014d872f76d5b2c62'
 
 $pp = Get-PackageParameters
 
