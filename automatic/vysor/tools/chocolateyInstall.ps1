@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url64       = 'https://github.com/koush/vysor.io/releases/download/v6.0.22/Vysor-6.0.22.Setup.exe'
-$checksum64  = 'bc502362a93b564ce428488c2a3002e078aabb7a050b73c86a9b7dacd8ba73e6'
+$url64       = 'https://github.com/koush/vysor.io/releases/download/v6.0.23/Vysor-6.0.23.Setup.exe'
+$checksum64  = '1565aebf7c4e5fd9905aedd28f42b0824fe23a3f531f0c591479757de6acaa94'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
